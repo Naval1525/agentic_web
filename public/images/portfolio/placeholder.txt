@@ -1,0 +1,7 @@
+This is a placeholder file. You should replace this with actual portfolio images:
+
+1. themj.png - For Themajesticpeacock
+2. raisspices.com.png - For RaisSpices
+3. sanurrirugs.com.png - For SanurriRugs
+
+The images should be placed in this directory.
