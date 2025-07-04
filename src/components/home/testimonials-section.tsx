@@ -22,8 +22,8 @@ const testimonials = [
     author: "Amit Roy",
     position: "Marketing Manager",
     company: "Lotus Wellness",
-    companyLogo: "/images/company/lotus-wellness-logo.png", // placeholder
-    profilePhoto: "/images/team/avatar1.png", // placeholder
+    
+    profilePhoto: "/images/team/avatar.png", // placeholder
     services: ["Website", "AI Chatbot", "Meta Ads"]
   },
   {
@@ -33,8 +33,8 @@ const testimonials = [
     author: "Neha Kapoor",
     position: "Sales Consultant",
     company: "BrightPath",
-    companyLogo: "/images/company/brightpath-logo.png",
-    profilePhoto: "/images/team/avatar3.png",
+    
+    profilePhoto: "/images/team/avatar.png",
     services: ["AI Sales Agent", "Website Redesign"]
   },
   {
@@ -44,8 +44,8 @@ const testimonials = [
     author: "Rahul Deshmukh",
     position: "Account Executive",
     company: "Urban Realty",
-    companyLogo: "/images/company/urban-realty-logo.png",
-    profilePhoto: "/images/team/avatar4.png",
+    
+    profilePhoto: "/images/team/avatar.png",
     services: ["AI Support Bot", "Automation"]
   },
   {
@@ -55,8 +55,8 @@ const testimonials = [
     author: "Aakash Verma",
     position: "Founder",
     company: "Verma Digital",
-    companyLogo: "/images/company/verma-digital-logo.png",
-    profilePhoto: "/images/team/avatar2.png",
+    
+    profilePhoto: "/images/team/avatar.png",
     services: ["Custom CRM", "Web App"]
   }
 ]
@@ -140,9 +140,6 @@ export default function TestimonialsSection() {
                         <div className="font-semibold text-white text-sm">{testimonial.author}</div>
                         <div className="text-xs text-blue-200 flex items-center gap-2">
                           {testimonial.position}, {testimonial.company}
-                          {testimonial.companyLogo && (
-                            <img src={testimonial.companyLogo} alt={testimonial.company} className="h-4 ml-2 inline-block" />
-                          )}
                         </div>
                         {/* Services used */}
                         {testimonial.services && (

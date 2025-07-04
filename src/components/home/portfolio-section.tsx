@@ -20,21 +20,21 @@ const portfolioItems = [
     id: 1,
     title: "Themajesticpeacock",
     description: "The Majestic Peacock is where elegance meets individuality. Discover a stunning collection of stylish, high-quality clothing designed to make a statement. From timeless classics to bold contemporary pieces, we bring you fashion that celebrates confidence, creativity, and sophistication.",
-    image: "/images/portfolio/themj.png",
+    image: "/images/portfolio/peacock.png",
     url: "https://themajesticpeacock.com"
   },
   {
     id: 2,
     title: "RaisSpices",
     description: "Raisspices offers a collection of premium quality spices sourced from the finest farms. Our spices are carefully selected and processed to ensure unparalleled freshness, flavor, and aroma. Transform your culinary creations with the perfect blend of tradition and excellence.",
-    image: "/images/portfolio/raisspices.com.png",
+    image: "/images/portfolio/raispices.png",
     url: "https://raisspices.com"
   },
   {
     id: 3,
     title: "SanurriRugs",
     description: "Premium Hand-Knotted Rugs - Sanurri Rugs. Explore the best hand-knotted rugs with customizable options.",
-    image: "/images/portfolio/sanurrirugs.com.png",
+    image: "/images/portfolio/rugs.png",
     url: "https://sanurrirugs.com"
   }
 ]

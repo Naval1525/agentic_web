@@ -75,10 +75,10 @@ export default function HeroSection() {
               <div className="flex items-center gap-2">
                 {/* Avatars */}
                 <div className="flex -space-x-2">
-                  <img src="/images/team/avatar1.png" alt="Avatar 1" className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white" />
-                  <img src="/images/team/avatar2.png" alt="Avatar 2" className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white" />
-                  <img src="/images/team/avatar3.png" alt="Avatar 3" className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white" />
-                  <img src="/images/team/avatar4.png" alt="Avatar 4" className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white" />
+                  <img src="/images/team/avatar.png" alt="Avatar 1" className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white" />
+                  <img src="/images/team/avatar.png" alt="Avatar 2" className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white" />
+                  <img src="/images/team/avatar.png" alt="Avatar 3" className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white" />
+                  <img src="/images/team/avatar.png" alt="Avatar 4" className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white" />
                   <span className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs sm:text-sm font-semibold border-2 border-white">+65</span>
                 </div>
               </div>
