@@ -92,18 +92,18 @@ const blogPosts = [
   },
   {
     id: 6,
-    title: 'SEO Strategies That Actually Work in 2024',
-    category: 'Digital Marketing',
+    title: 'AWS Serverless Architecture Best Practices',
+    category: 'AWS Cloud Services',
     date: 'April 15, 2024',
     author: 'Emma Wilson',
-    excerpt: 'Discover effective SEO strategies that can help your business improve visibility and drive organic traffic in 2024.',
+    excerpt: 'Learn the best practices for building scalable serverless applications on AWS Lambda and related services.',
     image: '/placeholder.jpg',
-    link: '/blog/seo-strategies'
+    link: '/blog/aws-serverless-best-practices'
   }
 ];
 
 // Categories for filtering
-const categories = ['All', 'Web Development', 'UI/UX Design', 'Blockchain', 'App Development', 'AI & Machine Learning', 'Digital Marketing'];
+const categories = ['All', 'Web Development', 'UI/UX Design', 'Blockchain', 'App Development', 'AI & Machine Learning', 'AWS Cloud Services'];
 
 export default function BlogPage() {
   const [filter, setFilter] = useState('All');

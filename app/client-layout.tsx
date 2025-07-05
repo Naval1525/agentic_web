@@ -28,7 +28,7 @@ export default function ClientLayout({
   return (
     <>
         {/* Custom Motion Cursor */}
-        <CursorWrapper />
+        {/* <CursorWrapper /> */}
 
         {/* Main Background Image */}
         <div
