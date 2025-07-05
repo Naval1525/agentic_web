@@ -130,16 +130,11 @@ export default function TestimonialsSection() {
                       <div className="w-10 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full mx-auto mb-0.5" />
                       <div className="flex flex-col items-center">
                         {/* Profile photo or stylized avatar */}
-                        {testimonial.profilePhoto ? (
-                          <img src={testimonial.profilePhoto} alt={testimonial.author} className="w-10 h-10 rounded-full border-2 border-blue-400 mb-1 object-cover" />
-                        ) : (
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 flex items-center justify-center mb-1">
-                            <span className="text-base font-bold text-white">{testimonial.author.charAt(0)}</span>
-                          </div>
-                        )}
+                        
                         <div className="font-semibold text-white text-sm">{testimonial.author}</div>
                         <div className="text-xs text-blue-200 flex items-center gap-2">
                           {testimonial.position}, {testimonial.company}
+                          
                         </div>
                         {/* Services used */}
                         {testimonial.services && (

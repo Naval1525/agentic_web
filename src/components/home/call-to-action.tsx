@@ -34,7 +34,7 @@ const CallToAction = () => {
           size="lg"
           className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
         >
-          <a href="https://calendly.com/webnexaai/30min" target="_blank" rel="noopener noreferrer">
+          <a href="https://cal.com/devanshi-jaiswal-gjcdhl/discovery-call" target="_blank" rel="noopener noreferrer">
             Book Free Strategy Call
             <motion.div
               whileHover={{ x: 4 }}
