@@ -18,24 +18,24 @@ import {
 const portfolioItems = [
   {
     id: 1,
-    title: "Themajesticpeacock",
-    description: "The Majestic Peacock is where elegance meets individuality. Discover a stunning collection of stylish, high-quality clothing designed to make a statement. From timeless classics to bold contemporary pieces, we bring you fashion that celebrates confidence, creativity, and sophistication.",
-    image: "/images/portfolio/themj.png",
-    url: "https://themajesticpeacock.com"
+    title: "Naveen's Chemistry Classes",
+    description: "Unlock the secrets of chemistry with our expert guidance at Tripple point. Our comprehensive coaching centre offers personalized instruction and practice sessions tailored to your learning needs. ",
+    image: "/images/portfolio/chem.png",
+    url: "https://ignite-learning-hub-portal.vercel.app/"
   },
   {
     id: 2,
-    title: "RaisSpices",
-    description: "Raisspices offers a collection of premium quality spices sourced from the finest farms. Our spices are carefully selected and processed to ensure unparalleled freshness, flavor, and aroma. Transform your culinary creations with the perfect blend of tradition and excellence.",
-    image: "/images/portfolio/raisspices.com.png",
-    url: "https://raisspices.com"
+    title: "Virtual Venture",
+    description: "A place to master stock without the hassle of using pen and paper",
+    image: "/images/portfolio/vv.png",
+    url: "https://virtual-ventures.netlify.app/"
   },
   {
     id: 3,
     title: "SanurriRugs",
-    description: "Premium Hand-Knotted Rugs - Sanurri Rugs. Explore the best hand-knotted rugs with customizable options.",
-    image: "/images/portfolio/sanurrirugs.com.png",
-    url: "https://sanurrirugs.com"
+    description: "Your go-to platform for coding questions, community-driven answers, and knowledge sharing. Join our community !",
+    image: "/images/portfolio/df.png",
+    url: "https://devflow-1.onrender.com/"
   }
 ]
 
