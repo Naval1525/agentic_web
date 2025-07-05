@@ -2,11 +2,10 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Rocket, Bot, BrainCog, MessageSquare, Cloud, Database, Shield, Server, Cpu, ExternalLink } from "lucide-react";
+import { Rocket, Bot, BrainCog, MessageSquare, Cloud, Database, Shield, Server, Cpu, ExternalLink,User } from "lucide-react";
 import Link from "next/link";
 import AboutSection from "@/src/components/home/about-section";
 import { Button } from "@/src/components/ui/button";
-import { Dialog, DialogTrigger, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 const projects = [
   // AI Automation
@@ -198,15 +197,15 @@ const projects = [
 
 const categories = [
   {
-    name: 'AI Automation',
+    name: "AI Automation",
     icon: <Bot />,
   },
   {
-    name: 'AI Agents-as-a-Service',
+    name: "AI Agents-as-a-Service",
     icon: <BrainCog />,
   },
   {
-    name: 'AI Chatbots',
+    name: "AI Chatbots",
     icon: <MessageSquare />,
   },
   {
@@ -219,6 +218,45 @@ const categories = [
   },
 ];
 
+const teamMembers = [
+  {
+    id: 1,
+    name: "Devanshi Jaiswal",
+    role: "AI Strategist",
+    description:
+      "Leading AI transformation with 2+ years in machine learning and business automation. Expert in developing custom AI solutions for enterprise clients.",
+    image: "/placeholder.svg?height=400&width=400",
+    specialties: ["AI Strategy", "Machine Learning", "Business Automation"],
+  },
+  {
+    id: 2,
+    name: "Naval Bihani",
+    role: "FULLSTACK Developer",
+    description:
+      "Full-stack developer specializing in React, Node.js, and AI integrations. Passionate about creating scalable web applications with cutting-edge technology.",
+    image: "/placeholder.svg?height=400&width=400",
+    specialties: ["React", "Node.js", "AI Integration"],
+  },
+  {
+    id: 3,
+    name: "Ansh Singhal",
+    role: "AI Engineer/Developer",
+    description:
+      "AI engineer with expertise in natural language processing and computer vision. Builds intelligent systems that understand and interact with human language.",
+    image: "/placeholder.svg?height=400&width=400",
+    specialties: ["NLP", "Computer Vision", "Deep Learning"],
+  },
+  {
+    id: 4,
+    name: "Aditya Maurya",
+    role: "FULLSTACK Developer",
+    description:
+      "Creative designer focused on user-centered design and creating intuitive interfaces. Specializes in designing AI-powered applications that are both beautiful and functional.",
+    image: "/placeholder.svg?height=400&width=400",
+    specialties: ["UI/UX Design", "Prototyping", "User Research"],
+  },
+];
+
 export default function PortfolioPage() {
   return (
     <main className="min-h-screen relative">
@@ -228,41 +266,50 @@ export default function PortfolioPage() {
           src="/background.jpg"
           alt="Background"
           className="w-full h-full object-cover object-center"
-          style={{ minHeight: '100%', minWidth: '100%' }}
+          style={{ minHeight: "100%", minWidth: "100%" }}
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>
-      
+
       {/* Additional atmospheric gradient */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/70 via-transparent to-black/50"></div>
-      
+
       {/* Subtle warm glow effect */}
       <div className="absolute inset-0 -z-10 bg-gradient-radial from-blue-500/10 via-transparent to-slate-900/60"></div>
 
       {/* Hero Section */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 max-w-4xl relative z-10"
       >
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Our Portfolio</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+            Our Portfolio
+          </h1>
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-            Explore our latest projects and see how we help businesses transform their digital presence.
+            Explore our latest projects and see how we help businesses transform
+            their digital presence.
           </p>
         </div>
-        
+
         {/* Collapsible Sections by Category */}
         <div className="space-y-8 sm:space-y-10">
           {categories.map((cat, idx) => {
-            const catProjects = projects.filter(p => p.category === cat.name);
+            const catProjects = projects.filter((p) => p.category === cat.name);
             if (catProjects.length === 0) return null;
+
             return (
-              <AboutSection key={cat.name} icon={cat.icon} title={cat.name} delay={0.1 * (idx + 1)}>
+              <AboutSection
+                key={cat.name}
+                icon={cat.icon}
+                title={cat.name}
+                delay={0.1 * (idx + 1)}
+              >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-                  {catProjects.map(project => (
-                    <motion.div 
+                  {catProjects.map((project) => (
+                    <motion.div
                       key={project.id}
                       initial={{ opacity: 0, x: -30 }}
                       whileInView={{ opacity: 1, x: 0 }}
@@ -271,11 +318,18 @@ export default function PortfolioPage() {
                       className="bg-blue-500/5 border border-blue-500/20 rounded-lg p-4 sm:p-6 flex flex-col justify-between shadow-lg hover:bg-blue-500/10 transition-colors duration-300"
                     >
                       <div>
-                        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 text-blue-300">{project.title}</h3>
-                        <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4 leading-relaxed">{project.description}</p>
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 text-blue-300">
+                          {project.title}
+                        </h3>
+                        <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4 leading-relaxed">
+                          {project.description}
+                        </p>
                         <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
-                          {project.tags.map(tag => (
-                            <span key={tag} className="px-2 sm:px-3 py-1 text-xs bg-blue-500/20 text-blue-200 rounded-full font-medium">
+                          {project.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="px-2 sm:px-3 py-1 text-xs bg-blue-500/20 text-blue-200 rounded-full font-medium"
+                            >
                               {tag}
                             </span>
                           ))}
@@ -288,9 +342,19 @@ export default function PortfolioPage() {
                           </Link> */}
                         </Button>
                         {project.url && (
-                          <Button asChild size="sm" variant="secondary" className="text-xs sm:text-sm">
-                            <Link href={project.url} target="_blank" rel="noopener noreferrer">
-                              Live <ExternalLink className="ml-1 h-3 w-3 sm:h-4 sm:w-4 inline" />
+                          <Button
+                            asChild
+                            size="sm"
+                            variant="secondary"
+                            className="text-xs sm:text-sm"
+                          >
+                            <Link
+                              href={project.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Live{" "}
+                              <ExternalLink className="ml-1 h-3 w-3 sm:h-4 sm:w-4 inline" />
                             </Link>
                           </Button>
                         )}
@@ -302,9 +366,11 @@ export default function PortfolioPage() {
             );
           })}
         </div>
+
         
+
         {/* Call to Action */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -312,8 +378,14 @@ export default function PortfolioPage() {
           className="text-center mt-12 sm:mt-16 lg:mt-20"
         >
           <div className="mb-6 sm:mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">Ready to start your project?</h2>
-            <p className="text-base sm:text-lg text-gray-300 px-4">Let's build something amazing together. Book a free strategy call today!</p>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">
+              Ready to start your project?
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300 px-4">
+              {
+                "Let's build something amazing together. Book a free strategy call today!"
+              }
+            </p>
           </div>
           <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold">
             <a href="https://cal.com/devanshi-jaiswal-gjcdhl/discovery-call" target="_blank" rel="noopener noreferrer">Book a Free Call</a>
