@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Rocket, Bot, BrainCog, MessageSquare, Cloud, Database, Shield, Server, Cpu, ExternalLink } from "lucide-react";
+import { Rocket, Bot, BrainCog, MessageSquare, Cloud, Database, Shield, Server, Cpu, ExternalLink,User } from "lucide-react";
 import Link from "next/link";
 import AboutSection from "@/src/components/home/about-section";
 import { Button } from "@/src/components/ui/button";
@@ -367,58 +367,7 @@ export default function PortfolioPage() {
           })}
         </div>
 
-        {/* Meet Our Team Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-16 sm:mt-20 lg:mt-24"
-        >
-          <AboutSection icon={<Users />} title="Meet Our Team" delay={0.3}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-              {teamMembers.map((member, idx) => (
-                <motion.div
-                  key={member.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 * idx }}
-                  className="bg-blue-500/5 border border-blue-500/20 rounded-lg p-6 shadow-lg hover:bg-blue-500/10 transition-colors duration-300"
-                >
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-24 h-24 sm:w-32 sm:h-32 mb-4 rounded-full overflow-hidden border-2 border-blue-400/30">
-                      <img
-                        src={member.image || "/placeholder.svg"}
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <h3 className="text-xl sm:text-2xl font-bold mb-2 text-blue-300">
-                      {member.name}
-                    </h3>
-                    <p className="text-blue-400 font-medium mb-3 sm:mb-4">
-                      {member.role}
-                    </p>
-                    <p className="text-sm sm:text-base text-gray-300 mb-4 leading-relaxed">
-                      {member.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {member.specialties.map((specialty) => (
-                        <span
-                          key={specialty}
-                          className="px-3 py-1 text-xs bg-blue-500/20 text-blue-200 rounded-full font-medium"
-                        >
-                          {specialty}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </AboutSection>
-        </motion.div>
+        
 
         {/* Call to Action */}
         <motion.div

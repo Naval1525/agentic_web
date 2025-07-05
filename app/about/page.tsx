@@ -14,8 +14,45 @@ import {
   Target,
   Lightbulb,
   Handshake,
-  Settings
+  Settings,
+  User
 } from "lucide-react";
+
+// Team members data
+const teamMembers = [
+  {
+    id: 1,
+    name: "Alex Johnson",
+    role: "Lead Developer & AI Architect",
+    description: "Full-stack developer with 8+ years of experience building scalable web applications and AI-powered solutions. Specializes in Next.js, AWS, and automation systems.",
+    image: "/team/alex.jpg",
+    specialties: ["Next.js", "AWS", "AI Integration", "Automation"]
+  },
+  {
+    id: 2,
+    name: "Sarah Chen",
+    role: "UI/UX Designer & Frontend Developer",
+    description: "Creative designer and frontend specialist focused on creating beautiful, user-friendly interfaces. Expert in modern design systems and responsive development.",
+    image: "/team/sarah.jpg",
+    specialties: ["UI/UX Design", "React", "Tailwind CSS", "Design Systems"]
+  },
+  {
+    id: 3,
+    name: "Mike Rodriguez",
+    role: "Cloud Infrastructure & DevOps",
+    description: "AWS certified solutions architect with expertise in serverless technologies, CI/CD pipelines, and scalable cloud infrastructure.",
+    image: "/team/mike.jpg",
+    specialties: ["AWS", "Serverless", "DevOps", "Infrastructure"]
+  },
+  {
+    id: 4,
+    name: "Emma Wilson",
+    role: "AI Solutions & Automation Specialist",
+    description: "AI engineer specializing in custom chatbots, workflow automation, and intelligent business process optimization.",
+    image: "/team/emma.jpg",
+    specialties: ["AI Agents", "Automation", "Process Optimization", "Chatbots"]
+  }
+];
 
 const AboutPage = () => {
   return (
@@ -49,6 +86,49 @@ const AboutPage = () => {
               </p>
             </div>
           </AboutSection>
+
+          {/* Meet Our Team Section */}
+          <div className="mt-16 sm:mt-20 lg:mt-24">
+            <AboutSection icon={<User className="h-6 w-6 sm:h-7 sm:w-7" />} title="Meet Our Team" delay={0.15}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                {teamMembers.map((member, idx) => (
+                  <div
+                    key={member.id}
+                    className="bg-blue-500/5 border border-blue-500/20 rounded-lg p-6 shadow-lg hover:bg-blue-500/10 transition-colors duration-300"
+                  >
+                    <div className="flex flex-col items-center text-center">
+                      <div className="w-24 h-24 sm:w-32 sm:h-32 mb-4 rounded-full overflow-hidden border-2 border-blue-400/30">
+                        <img
+                          src={member.image || "/placeholder.svg"}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <h3 className="text-xl sm:text-2xl font-bold mb-2 text-blue-300">
+                        {member.name}
+                      </h3>
+                      <p className="text-blue-400 font-medium mb-3 sm:mb-4">
+                        {member.role}
+                      </p>
+                      <p className="text-sm sm:text-base text-gray-300 mb-4 leading-relaxed">
+                        {member.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 justify-center">
+                        {member.specialties.map((specialty) => (
+                          <span
+                            key={specialty}
+                            className="px-3 py-1 text-xs bg-blue-500/20 text-blue-200 rounded-full font-medium"
+                          >
+                            {specialty}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </AboutSection>
+          </div>
 
           <AboutSection icon={<Settings className="h-6 w-6 sm:h-7 sm:w-7" />} title="What Makes Us Different" delay={0.2}>
             <div className="space-y-3 sm:space-y-4">
