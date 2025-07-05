@@ -47,7 +47,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.1, type: 'spring' }}
             className="mb-4 text-xs md:text-sm font-semibold uppercase tracking-widest text-gray-300"
           >
-            AI Automation & Marketing Agency
+            AI Automation & AWS Cloud Solutions
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
@@ -63,7 +63,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4, type: 'spring' }}
             className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed animate-fadeInUp font-semibold drop-shadow"
           >
-            From high-performance websites to custom AI agents and smart marketing systems — we build everything you need to grow on autopilot.
+            From high-performance websites to custom AI agents and AWS cloud infrastructure — we build everything you need to scale on autopilot.
           </motion.p>
           {/* Social Proof Row */}
           <motion.div
@@ -74,13 +74,13 @@ export default function HeroSection() {
           >
               <div className="flex items-center gap-2">
                 {/* Avatars */}
-                <div className="flex -space-x-2">
+                {/* <div className="flex -space-x-2">
                   <img src="/images/team/avatar1.png" alt="Avatar 1" className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white" />
                   <img src="/images/team/avatar2.png" alt="Avatar 2" className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white" />
                   <img src="/images/team/avatar3.png" alt="Avatar 3" className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white" />
                   <img src="/images/team/avatar4.png" alt="Avatar 4" className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white" />
                   <span className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs sm:text-sm font-semibold border-2 border-white">+65</span>
-                </div>
+                </div> */}
               </div>
               <div className="flex items-center gap-2">
                 {/* Stars */}

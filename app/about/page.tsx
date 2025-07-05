@@ -8,7 +8,7 @@ import {
   Zap,
   Bot,
   RotateCcw,
-  TrendingUp,
+  Cloud,
   Rocket,
   Users,
   Target,
@@ -52,8 +52,8 @@ const AboutPage = () => {
 
           <AboutSection icon={<Settings className="h-6 w-6 sm:h-7 sm:w-7" />} title="What Makes Us Different" delay={0.2}>
             <div className="space-y-3 sm:space-y-4">
-              <p className="text-base sm:text-lg text-gray-300">We don't just build websites — we build growth engines.</p>
-              <p className="text-base sm:text-lg text-gray-300">We don't run ads — we automate lead machines.</p>
+              <p className="text-base sm:text-lg text-gray-300">We don't just build websites — we build scalable cloud solutions.</p>
+              <p className="text-base sm:text-lg text-gray-300">We don't just deploy apps — we architect AWS infrastructure.</p>
               <p className="text-base sm:text-lg text-gray-300">We don't use AI for the buzz — we use it to cut cost, time, and friction.</p>
             </div>
           </AboutSection>
@@ -76,8 +76,8 @@ const AboutPage = () => {
                 delay={0.3}
               />
               <ServiceItem 
-                icon={<TrendingUp className="h-5 w-5 sm:h-6 sm:w-6" />} 
-                text="AI-powered marketing funnels & creative" 
+                icon={<Cloud className="h-5 w-5 sm:h-6 sm:w-6" />} 
+                text="AWS cloud infrastructure & serverless solutions" 
                 delay={0.4}
               />
             </div>

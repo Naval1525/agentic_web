@@ -45,7 +45,7 @@ export const ServiceAccordion = () => {
         </p>
         <a 
           href="https://calendly.com/webnexaai/30min" 
-          className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-black bg-white rounded-xl hover:scale-105 transition hover:bg-gray-100"
+          className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-black bg-white rounded-xl hover:scale-105 transition hover:bg-gray-100 mb-10"
           target="_blank"
           rel="noopener noreferrer"
         >

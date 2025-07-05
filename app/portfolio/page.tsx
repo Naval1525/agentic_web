@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Rocket, Bot, BrainCog, MessageSquare, TrendingUp, GalleryHorizontal, ExternalLink } from "lucide-react";
+import { Rocket, Bot, BrainCog, MessageSquare, Cloud, Database, Shield, Server, Cpu, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import AboutSection from "@/src/components/home/about-section";
 import { Button } from "@/src/components/ui/button";
@@ -123,36 +123,79 @@ const projects = [
     link: '/portfolio/custom-support-chatbot',
     url: '',
   },
-  // AI-Powered Digital Marketing
+  // AWS Cloud Infrastructure
   {
     id: 12,
-    title: 'AI Content Generator',
-    category: 'AI-Powered Digital Marketing',
-    tags: ['Python', 'TensorFlow', 'NLP'],
-    description: 'An AI-powered content generation tool that creates high-quality, SEO-optimized content for various industries.',
+    title: 'Multi-Region Cloud Architecture',
+    category: 'AWS Cloud Infrastructure',
+    tags: ['EC2', 'CloudFormation', 'Auto-scaling', 'Load Balancer'],
+    description: 'A scalable cloud infrastructure designed for high availability and performance across multiple regions.',
     image: '/placeholder.jpg',
-    link: '/portfolio/ai-content-generator',
+    link: '/portfolio/multi-region-cloud',
     url: '',
   },
   {
     id: 13,
-    title: 'Automated Ad Campaigns',
-    category: 'AI-Powered Digital Marketing',
-    tags: ['Meta Ads', 'Google Ads', 'Automation'],
-    description: 'Automated ad campaign management with AI-driven creative testing and budget optimization.',
+    title: 'Serverless E-commerce Platform',
+    category: 'AWS Cloud Infrastructure',
+    tags: ['Lambda', 'API Gateway', 'DynamoDB', 'CloudFront'],
+    description: 'A fully serverless e-commerce platform built on AWS with auto-scaling and global content delivery.',
     image: '/placeholder.jpg',
-    link: '/portfolio/automated-ad-campaigns',
+    link: '/portfolio/serverless-ecommerce',
     url: '',
   },
-  // AI-Generated Product Ads
+  // AWS Database Solutions
   {
     id: 14,
-    title: 'AI Product Visuals',
-    category: 'AI-Generated Product Ads',
-    tags: ['AI Visuals', 'Ad Copy', 'UGC Scripts'],
-    description: 'Instantly generate product visuals, captions, and UGC-style video scripts for your brand.',
+    title: 'Database Migration & Optimization',
+    category: 'AWS Database Solutions',
+    tags: ['RDS', 'Aurora', 'DMS', 'Performance Tuning'],
+    description: 'Comprehensive database migration from on-premise to AWS with performance optimization and monitoring.',
     image: '/placeholder.jpg',
-    link: '/portfolio/ai-product-visuals',
+    link: '/portfolio/database-migration',
+    url: '',
+  },
+  {
+    id: 15,
+    title: 'NoSQL Data Architecture',
+    category: 'AWS Database Solutions',
+    tags: ['DynamoDB', 'ElastiCache', 'Data Modeling', 'Caching'],
+    description: 'High-performance NoSQL database architecture with Redis caching for real-time applications.',
+    image: '/placeholder.jpg',
+    link: '/portfolio/nosql-architecture',
+    url: '',
+  },
+  // AWS Security & Compliance
+  {
+    id: 16,
+    title: 'Enterprise Security Framework',
+    category: 'AWS Security & Compliance',
+    tags: ['IAM', 'VPC', 'CloudTrail', 'Compliance'],
+    description: 'Comprehensive security framework with IAM policies, VPC configuration, and compliance monitoring.',
+    image: '/placeholder.jpg',
+    link: '/portfolio/enterprise-security',
+    url: '',
+  },
+  // AWS DevOps & CI/CD
+  {
+    id: 17,
+    title: 'Automated CI/CD Pipeline',
+    category: 'AWS DevOps & CI/CD',
+    tags: ['CodePipeline', 'CodeBuild', 'ECS', 'Docker'],
+    description: 'End-to-end CI/CD pipeline with automated testing, building, and deployment to AWS ECS.',
+    image: '/placeholder.jpg',
+    link: '/portfolio/cicd-pipeline',
+    url: '',
+  },
+  // AWS AI/ML Services
+  {
+    id: 18,
+    title: 'ML Model Training Platform',
+    category: 'AWS AI/ML Services',
+    tags: ['SageMaker', 'Lambda', 'S3', 'API Gateway'],
+    description: 'Machine learning model training and deployment platform using Amazon SageMaker and serverless architecture.',
+    image: '/placeholder.jpg',
+    link: '/portfolio/ml-platform',
     url: '',
   },
 ];
@@ -175,12 +218,24 @@ const categories = [
     icon: <MessageSquare />,
   },
   {
-    name: 'AI-Powered Digital Marketing',
-    icon: <TrendingUp />,
+    name: 'AWS Cloud Infrastructure',
+    icon: <Cloud />,
   },
   {
-    name: 'AI-Generated Product Ads',
-    icon: <GalleryHorizontal />,
+    name: 'AWS Database Solutions',
+    icon: <Database />,
+  },
+  {
+    name: 'AWS Security & Compliance',
+    icon: <Shield />,
+  },
+  {
+    name: 'AWS DevOps & CI/CD',
+    icon: <Server />,
+  },
+  {
+    name: 'AWS AI/ML Services',
+    icon: <Cpu />,
   },
 ];
 
@@ -248,9 +303,9 @@ export default function PortfolioPage() {
                       </div>
                       <div className="flex gap-2 mt-2 sm:mt-3">
                         <Button asChild size="sm" variant="outline" className="text-xs sm:text-sm">
-                          <Link href={project.link}>
+                          {/* <Link href={project.link}>
                             Details
-                          </Link>
+                          </Link> */}
                         </Button>
                         {project.url && (
                           <Button asChild size="sm" variant="secondary" className="text-xs sm:text-sm">
