@@ -31,7 +31,7 @@ export default function Header() {
           <Link href="/about" className="text-[#B0B0B0] hover:text-[#E0E0E0] transition-colors font-medium">About</Link>
           <Link href="/services" className="text-[#B0B0B0] hover:text-[#E0E0E0] transition-colors font-medium">Services</Link>
           <Link href="/portfolio" className="text-[#B0B0B0] hover:text-[#E0E0E0] transition-colors font-medium">Portfolio</Link>
-          <Link href="/blog" className="text-[#B0B0B0] hover:text-[#E0E0E0] transition-colors font-medium">Blog</Link>
+          <Link href="/projects" className="text-[#B0B0B0] hover:text-[#E0E0E0] transition-colors font-medium">Projects</Link>
           <Link href="/contact" className="text-[#B0B0B0] hover:text-[#E0E0E0] transition-colors font-medium">Contact</Link>
         </div>
         
@@ -92,13 +92,13 @@ export default function Header() {
                   >
                     Portfolio
                   </Link>
-                  <Link 
+                  {/* <Link 
                     href="/blog" 
                     className="flex items-center px-4 py-3 text-[#E0E0E0] hover:text-white hover:bg-[#333] rounded-lg transition-all duration-200 font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     Blog
-                  </Link>
+                  </Link> */}
                   <Link 
                     href="/contact" 
                     className="flex items-center px-4 py-3 text-[#E0E0E0] hover:text-white hover:bg-[#333] rounded-lg transition-all duration-200 font-medium"
@@ -111,7 +111,7 @@ export default function Header() {
                 {/* Bottom CTA */}
                 <div className="pt-4 border-t border-[#444]">
                   <a
-                    href="https://calendly.com/webnexaai/30min"
+                    href="https://cal.com/devanshi-jaiswal-gjcdhl/discovery-call"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center px-4 py-2 bg-[#232323] hover:bg-[#333] text-[#E0E0E0] rounded-md font-medium transition-colors border border-[#444] w-full justify-center"
@@ -131,7 +131,7 @@ export default function Header() {
         {/* Desktop Let's Talk Button */}
         <div className="hidden md:block">
           <a
-            href="https://calendly.com/webnexaai/30min"
+            href="https://cal.com/devanshi-jaiswal-gjcdhl/discovery-call"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center px-4 py-2 bg-[#232323] hover:bg-[#333] text-[#E0E0E0] rounded-md font-medium transition-colors border border-[#444]"

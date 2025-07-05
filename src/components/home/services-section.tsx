@@ -7,12 +7,18 @@ import {
   Code,
   Palette,
   Shield,
-  TrendingUp,
+  Cloud,
   Terminal,
   Smartphone,
   Bitcoin,
   MessageSquare,
   LayoutDashboard,
+  Database,
+  Server,
+  Zap,
+  Cpu,
+  Network,
+  Lock,
   ArrowRight
 } from "lucide-react"
 
@@ -24,40 +30,56 @@ const services = [
     title: "AI Automation",
     description: "Automate operations & save time with AI agents and backend workflows.",
     stat: "25+ AI agents deployed",
-    href: "/ourportfolio",
+    href: "/portfolio",
     features: ["AI Agents", "Workflow Automation", "Backend Systems", "Process Optimization"]
   },
   {
     icon: <MessageSquare className="h-5 w-5" />,
-    title: "AI Chatbots & Agents",
+    title: "AI Agents-as-a-Service",
     description: "24/7 support that actually talks with GPT-powered bots.",
     stat: "Used by 20+ brands",
-    href: "/ourportfolio",
+    href: "/portfolio",
     features: ["GPT Integration", "24/7 Support", "Lead Qualification", "Booking Systems"]
   },
   {
-    icon: <TrendingUp className="h-5 w-5" />,
-    title: "AI Marketing Funnels",
-    description: "Scale your reach on autopilot with Meta ads and AI copy.",
-    stat: "30% average increase in ROAS",
-    href: "/ourportfolio",
-    features: ["Meta Ads", "AI Copywriting", "Automated Follow-ups", "ROAS Optimization"]
+    icon: <MessageSquare className="h-5 w-5" />,
+    title: "AI Chatbots",
+    description: "GPT bots that convert visitors into leads — hands-free.",
+    stat: "12 bots deployed",
+    href: "/portfolio",
+    features: ["Custom Logic", "Real-time Integration", "Lead Conversion", "24/7 Support"]
   },
   {
     icon: <Globe className="h-5 w-5" />,
     title: "Web Design & Development",
     description: "Lightning-fast Next.js sites optimized for SEO and conversion.",
     stat: "50+ websites launched",
-    href: "/ourportfolio",
+    href: "/portfolio",
     features: ["Next.js Development", "SEO Optimization", "Mobile Responsive", "Performance"]
   },
   {
-    icon: <LayoutDashboard className="h-5 w-5" />,
-    title: "Custom CRM & Dashboards",
-    description: "All-in-one growth control panels for tracking and automation.",
-    stat: "10+ businesses scaled",
-    href: "/ourportfolio",
-    features: ["Custom CRM", "Analytics Dashboards", "Lead Tracking", "Workflow Automation"]
+    icon: <Cloud className="h-5 w-5" />,
+    title: "AWS Cloud Infrastructure",
+    description: "Scalable cloud solutions built on AWS best practices and enterprise standards.",
+    stat: "15+ cloud infrastructures deployed",
+    href: "/portfolio",
+    features: ["EC2 & Lambda", "Auto-scaling", "CloudFormation", "Multi-region"]
+  },
+  {
+    icon: <Database className="h-5 w-5" />,
+    title: "AWS Database Solutions",
+    description: "Managed database services for optimal performance and scalability.",
+    stat: "20+ database solutions implemented",
+    href: "/portfolio",
+    features: ["RDS & Aurora", "DynamoDB", "ElastiCache", "Migration Services"]
+  },
+  {
+    icon: <Shield className="h-5 w-5" />,
+    title: "AWS Security & Compliance",
+    description: "Enterprise-grade security for your cloud infrastructure and data protection.",
+    stat: "10+ security implementations",
+    href: "/portfolio",
+    features: ["IAM & VPC", "CloudTrail", "Compliance", "Monitoring"]
   }
 ]
 

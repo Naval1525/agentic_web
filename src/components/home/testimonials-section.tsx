@@ -22,8 +22,8 @@ const testimonials = [
     author: "Amit Roy",
     position: "Marketing Manager",
     company: "Lotus Wellness",
-    companyLogo: "/images/company/lotus-wellness-logo.png", // placeholder
-    profilePhoto: "/images/team/avatar1.png", // placeholder
+    
+    profilePhoto: "/images/team/avatar.png", // placeholder
     services: ["Website", "AI Chatbot", "Meta Ads"]
   },
   {
@@ -33,8 +33,8 @@ const testimonials = [
     author: "Neha Kapoor",
     position: "Sales Consultant",
     company: "BrightPath",
-    companyLogo: "/images/company/brightpath-logo.png",
-    profilePhoto: "/images/team/avatar3.png",
+    
+    profilePhoto: "/images/team/avatar.png",
     services: ["AI Sales Agent", "Website Redesign"]
   },
   {
@@ -44,8 +44,8 @@ const testimonials = [
     author: "Rahul Deshmukh",
     position: "Account Executive",
     company: "Urban Realty",
-    companyLogo: "/images/company/urban-realty-logo.png",
-    profilePhoto: "/images/team/avatar4.png",
+    
+    profilePhoto: "/images/team/avatar.png",
     services: ["AI Support Bot", "Automation"]
   },
   {
@@ -55,8 +55,8 @@ const testimonials = [
     author: "Aakash Verma",
     position: "Founder",
     company: "Verma Digital",
-    companyLogo: "/images/company/verma-digital-logo.png",
-    profilePhoto: "/images/team/avatar2.png",
+    
+    profilePhoto: "/images/team/avatar.png",
     services: ["Custom CRM", "Web App"]
   }
 ]
@@ -130,19 +130,11 @@ export default function TestimonialsSection() {
                       <div className="w-10 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full mx-auto mb-0.5" />
                       <div className="flex flex-col items-center">
                         {/* Profile photo or stylized avatar */}
-                        {testimonial.profilePhoto ? (
-                          <img src={testimonial.profilePhoto} alt={testimonial.author} className="w-10 h-10 rounded-full border-2 border-blue-400 mb-1 object-cover" />
-                        ) : (
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 flex items-center justify-center mb-1">
-                            <span className="text-base font-bold text-white">{testimonial.author.charAt(0)}</span>
-                          </div>
-                        )}
+                        
                         <div className="font-semibold text-white text-sm">{testimonial.author}</div>
                         <div className="text-xs text-blue-200 flex items-center gap-2">
                           {testimonial.position}, {testimonial.company}
-                          {testimonial.companyLogo && (
-                            <img src={testimonial.companyLogo} alt={testimonial.company} className="h-4 ml-2 inline-block" />
-                          )}
+                          
                         </div>
                         {/* Services used */}
                         {testimonial.services && (

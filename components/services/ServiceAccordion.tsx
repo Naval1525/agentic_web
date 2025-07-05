@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ServiceItem } from "./ServiceItem";
 import { services } from "./services";
-import { Dialog, DialogTrigger, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -18,15 +17,17 @@ export const ServiceAccordion = () => {
   return (
     <>
       <motion.section 
-        className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 px-4 py-8 sm:gap-6 sm:px-6 md:grid-cols-2 lg:px-8"
+        className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 lg:px-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
       >
-        {services.map((service, i) => (
-          <ServiceItem key={i} {...service} />
-        ))}
+        <div className="space-y-6">
+          {services.map((service, i) => (
+            <ServiceItem key={i} {...service} />
+          ))}
+        </div>
       </motion.section>
 
       <motion.div 
@@ -44,8 +45,8 @@ export const ServiceAccordion = () => {
           Book a free 1:1 strategy call and see if we're the right fit to help you scale with AI.
         </p>
         <a 
-          href="https://calendly.com/webnexaai/30min" 
-          className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-black bg-white rounded-xl hover:scale-105 transition hover:bg-gray-100"
+          href="https://cal.com/devanshi-jaiswal-gjcdhl/discovery-call" 
+          className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-black bg-white rounded-xl hover:scale-105 transition hover:bg-gray-100 mb-10"
           target="_blank"
           rel="noopener noreferrer"
         >
