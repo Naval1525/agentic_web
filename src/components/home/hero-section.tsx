@@ -102,7 +102,7 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
           >
             <Button asChild size="lg" className="rounded-full shadow-lg shadow-blue-400/20 animate-bounceOnce">
-              <a href="https://calendly.com/webnexaai/30min" target="_blank" rel="noopener noreferrer">
+              <a href="https://cal.com/devanshi-jaiswal-gjcdhl/discovery-call" target="_blank" rel="noopener noreferrer">
                 Book a Call <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>

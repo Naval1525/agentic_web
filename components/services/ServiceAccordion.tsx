@@ -44,7 +44,7 @@ export const ServiceAccordion = () => {
           Book a free 1:1 strategy call and see if we're the right fit to help you scale with AI.
         </p>
         <a 
-          href="https://calendly.com/webnexaai/30min" 
+          href="https://cal.com/devanshi-jaiswal-gjcdhl/discovery-call" 
           className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-black bg-white rounded-xl hover:scale-105 transition hover:bg-gray-100 mb-10"
           target="_blank"
           rel="noopener noreferrer"
