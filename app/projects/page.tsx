@@ -191,7 +191,7 @@ const CollapsibleSection = ({
   color,
   isOpen,
   onToggle,
-}) => (
+}: CollapsibleSectionProps) => (
   <div className="mb-8">
     <button
       onClick={onToggle}
@@ -218,7 +218,7 @@ const CollapsibleSection = ({
   </div>
 );
 
-const ProjectCard = ({ project }) => (
+const ProjectCard = ({ project }: ProjectCardProps) => (
   <div className="bg-gray-800/40 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden hover:border-gray-600 transition-all duration-300 group">
     <div className="relative overflow-hidden">
       <img
@@ -243,7 +243,7 @@ const ProjectCard = ({ project }) => (
       </p>
 
       <div className="flex flex-wrap gap-2 mb-4">
-        {project.tags.map((tag, index) => (
+        {project.tags.map((tag: string, index: number) => (
           <span
             key={index}
             className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30"
@@ -280,14 +280,14 @@ const ProjectCard = ({ project }) => (
 );
 
 export default function PortfolioShowcase() {
-  const [openSections, setOpenSections] = useState({
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     "Web Development": true,
     "Mobile Development": false,
     "UI/UX Design": false,
     "Data Science": false,
   });
 
-  const toggleSection = (categoryName) => {
+  const toggleSection = (categoryName: string) => {
     setOpenSections((prev) => ({
       ...prev,
       [categoryName]: !prev[categoryName],
