@@ -2,21 +2,12 @@
 import React, { useState } from "react";
 import {
   Code,
-  Smartphone,
   Globe,
   Database,
-  PaintBucket,
-  ShoppingCart,
-  ExternalLink,
   ChevronDown,
   ChevronRight,
-  Github,
   Eye,
   Bot,
-  TrendingUp,
-  Users,
-  Mail,
-  Briefcase,
   DollarSign,
 } from "lucide-react";
 
@@ -49,6 +40,10 @@ interface CollapsibleSectionProps {
 
 interface ProjectCardProps {
   project: Project;
+}
+
+interface OpenSections {
+  [key: string]: boolean;
 }
 
 const projects: Project[] = [
@@ -153,7 +148,7 @@ const categories: Category[] = [
   },
 ];
 
-const CollapsibleSection = ({
+const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
   children,
   title,
   icon,
@@ -190,7 +185,7 @@ const CollapsibleSection = ({
   </div>
 );
 
-const ProjectCard = ({ project }) => (
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
   <div className="bg-gray-800/40 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden hover:border-gray-600 transition-all duration-300 group">
     <div className="relative overflow-hidden">
       <img
@@ -258,15 +253,14 @@ const ProjectCard = ({ project }) => (
   </div>
 );
 
-export default function PortfolioShowcase() {
-  const [openSections, setOpenSections] = useState({
-    "Web Development": true,
-    "AI & Machine Learning": true,
+export default function PortfolioShowcase(): React.JSX.Element {
+  const [openSections, setOpenSections] = useState<OpenSections>({
+    "Web Development": false,
+    "AI & Machine Learning": false,
     Fintech: false,
-    "Mobile Development": false,
   });
 
-  const toggleSection = (categoryName) => {
+  const toggleSection = (categoryName: string): void => {
     setOpenSections((prev) => ({
       ...prev,
       [categoryName]: !prev[categoryName],
