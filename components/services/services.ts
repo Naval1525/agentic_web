@@ -14,18 +14,7 @@ import {
 } from "lucide-react";
 
 export const services = [
-  {
-    icon: Globe,
-    title: "Web Design & Development",
-    subtitle: "High-performance websites designed to convert and scale.",
-    content: [
-      "✅ Fully responsive & SEO-optimized websites",
-      "✅ Fast-loading UX with beautiful UI",
-      "✅ API integrations",
-      "✅ Custom dashboards, booking systems, and client portals",
-      "📌 50+ websites launched",
-    ],
-  },
+  // AI Services Section
   {
     icon: Bot,
     title: "AI Automation",
@@ -62,6 +51,20 @@ export const services = [
       "📌 12 bots deployed for active client use",
     ],
   },
+  // Web Development Section
+  {
+    icon: Globe,
+    title: "Web Design & Development",
+    subtitle: "High-performance websites designed to convert and scale.",
+    content: [
+      "✅ Fully responsive & SEO-optimized websites",
+      "✅ Fast-loading UX with beautiful UI",
+      "✅ API integrations",
+      "✅ Custom dashboards, booking systems, and client portals",
+      "📌 50+ websites launched",
+    ],
+  },
+  // AWS Cloud Services Section
   {
     icon: Cloud,
     title: "AWS Cloud Infrastructure",

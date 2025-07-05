@@ -9,50 +9,9 @@ import { Button } from "@/src/components/ui/button";
 import { Dialog, DialogTrigger, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 const projects = [
-  // Web Design & Development
-  {
-    id: 1,
-    title: 'E-Commerce Platform',
-    category: 'Web Design & Development',
-    tags: ['React', 'Node.js', 'MongoDB'],
-    description: 'A full-featured e-commerce platform with product management, cart functionality, payment processing, and order tracking.',
-    image: '/placeholder.jpg',
-    link: '/portfolio/e-commerce-platform',
-    url: 'https://themajesticpeacock.com',
-  },
-  {
-    id: 2,
-    title: 'Financial Dashboard',
-    category: 'Web Design & Development',
-    tags: ['Figma', 'Adobe XD', 'Prototyping'],
-    description: 'A comprehensive financial dashboard design for a fintech startup, featuring intuitive data visualization and user-friendly interface.',
-    image: '/placeholder.jpg',
-    link: '/portfolio/financial-dashboard',
-    url: 'https://raisspices.com',
-  },
-  {
-    id: 3,
-    title: 'Healthcare Mobile App',
-    category: 'Web Design & Development',
-    tags: ['React Native', 'Firebase', 'Health API'],
-    description: 'A mobile application for healthcare providers to manage patient records, appointments, and communication.',
-    image: '/placeholder.jpg',
-    link: '/portfolio/healthcare-app',
-    url: 'https://sanurrirugs.com',
-  },
-  {
-    id: 4,
-    title: 'Real Estate Website',
-    category: 'Web Design & Development',
-    tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
-    description: 'A modern real estate website with property listings, search functionality, and agent profiles.',
-    image: '/placeholder.jpg',
-    link: '/portfolio/real-estate-website',
-    url: '',
-  },
   // AI Automation
   {
-    id: 5,
+    id: 1,
     title: 'Email Automation',
     category: 'AI Automation',
     tags: ['Zapier', 'Gmail API', 'Workflows'],
@@ -62,7 +21,7 @@ const projects = [
     url: '',
   },
   {
-    id: 6,
+    id: 2,
     title: 'Lead Generation Automation',
     category: 'AI Automation',
     tags: ['Lead Forms', 'CRM', 'AI Qualification'],
@@ -73,7 +32,7 @@ const projects = [
   },
   // AI Agents-as-a-Service
   {
-    id: 7,
+    id: 3,
     title: 'AI Sales Agent',
     category: 'AI Agents-as-a-Service',
     tags: ['OpenAI', 'Zapier', 'CRM Integration'],
@@ -83,7 +42,7 @@ const projects = [
     url: '',
   },
   {
-    id: 8,
+    id: 4,
     title: 'AI Receptionist',
     category: 'AI Agents-as-a-Service',
     tags: ['OpenAI', 'Twilio', 'Voice'],
@@ -93,7 +52,7 @@ const projects = [
     url: '',
   },
   {
-    id: 9,
+    id: 5,
     title: 'AI Lead Qualifier',
     category: 'AI Agents-as-a-Service',
     tags: ['LangChain', 'OpenAI', 'Automation'],
@@ -103,7 +62,7 @@ const projects = [
     url: '',
   },
   {
-    id: 10,
+    id: 6,
     title: 'AI Booking Agent',
     category: 'AI Agents-as-a-Service',
     tags: ['OpenAI', 'Calendly', 'Integration'],
@@ -114,7 +73,7 @@ const projects = [
   },
   // AI Chatbots
   {
-    id: 11,
+    id: 7,
     title: 'Custom Support Chatbot',
     category: 'AI Chatbots',
     tags: ['GPT-4', 'Custom Data', 'Slack'],
@@ -123,11 +82,52 @@ const projects = [
     link: '/portfolio/custom-support-chatbot',
     url: '',
   },
-  // AWS Cloud Infrastructure
+  // Web Design & Development
+  {
+    id: 8,
+    title: 'E-Commerce Platform',
+    category: 'Web Design & Development',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    description: 'A full-featured e-commerce platform with product management, cart functionality, payment processing, and order tracking.',
+    image: '/placeholder.jpg',
+    link: '/portfolio/e-commerce-platform',
+    url: 'https://themajesticpeacock.com',
+  },
+  {
+    id: 9,
+    title: 'Financial Dashboard',
+    category: 'Web Design & Development',
+    tags: ['Figma', 'Adobe XD', 'Prototyping'],
+    description: 'A comprehensive financial dashboard design for a fintech startup, featuring intuitive data visualization and user-friendly interface.',
+    image: '/placeholder.jpg',
+    link: '/portfolio/financial-dashboard',
+    url: 'https://raisspices.com',
+  },
+  {
+    id: 10,
+    title: 'Healthcare Mobile App',
+    category: 'Web Design & Development',
+    tags: ['React Native', 'Firebase', 'Health API'],
+    description: 'A mobile application for healthcare providers to manage patient records, appointments, and communication.',
+    image: '/placeholder.jpg',
+    link: '/portfolio/healthcare-app',
+    url: 'https://sanurrirugs.com',
+  },
+  {
+    id: 11,
+    title: 'Real Estate Website',
+    category: 'Web Design & Development',
+    tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
+    description: 'A modern real estate website with property listings, search functionality, and agent profiles.',
+    image: '/placeholder.jpg',
+    link: '/portfolio/real-estate-website',
+    url: '',
+  },
+  // AWS Services (Consolidated)
   {
     id: 12,
     title: 'Multi-Region Cloud Architecture',
-    category: 'AWS Cloud Infrastructure',
+    category: 'AWS Services',
     tags: ['EC2', 'CloudFormation', 'Auto-scaling', 'Load Balancer'],
     description: 'A scalable cloud infrastructure designed for high availability and performance across multiple regions.',
     image: '/placeholder.jpg',
@@ -137,18 +137,17 @@ const projects = [
   {
     id: 13,
     title: 'Serverless E-commerce Platform',
-    category: 'AWS Cloud Infrastructure',
+    category: 'AWS Services',
     tags: ['Lambda', 'API Gateway', 'DynamoDB', 'CloudFront'],
     description: 'A fully serverless e-commerce platform built on AWS with auto-scaling and global content delivery.',
     image: '/placeholder.jpg',
     link: '/portfolio/serverless-ecommerce',
     url: '',
   },
-  // AWS Database Solutions
   {
     id: 14,
     title: 'Database Migration & Optimization',
-    category: 'AWS Database Solutions',
+    category: 'AWS Services',
     tags: ['RDS', 'Aurora', 'DMS', 'Performance Tuning'],
     description: 'Comprehensive database migration from on-premise to AWS with performance optimization and monitoring.',
     image: '/placeholder.jpg',
@@ -158,40 +157,37 @@ const projects = [
   {
     id: 15,
     title: 'NoSQL Data Architecture',
-    category: 'AWS Database Solutions',
+    category: 'AWS Services',
     tags: ['DynamoDB', 'ElastiCache', 'Data Modeling', 'Caching'],
     description: 'High-performance NoSQL database architecture with Redis caching for real-time applications.',
     image: '/placeholder.jpg',
     link: '/portfolio/nosql-architecture',
     url: '',
   },
-  // AWS Security & Compliance
   {
     id: 16,
     title: 'Enterprise Security Framework',
-    category: 'AWS Security & Compliance',
+    category: 'AWS Services',
     tags: ['IAM', 'VPC', 'CloudTrail', 'Compliance'],
     description: 'Comprehensive security framework with IAM policies, VPC configuration, and compliance monitoring.',
     image: '/placeholder.jpg',
     link: '/portfolio/enterprise-security',
     url: '',
   },
-  // AWS DevOps & CI/CD
   {
     id: 17,
     title: 'Automated CI/CD Pipeline',
-    category: 'AWS DevOps & CI/CD',
+    category: 'AWS Services',
     tags: ['CodePipeline', 'CodeBuild', 'ECS', 'Docker'],
     description: 'End-to-end CI/CD pipeline with automated testing, building, and deployment to AWS ECS.',
     image: '/placeholder.jpg',
     link: '/portfolio/cicd-pipeline',
     url: '',
   },
-  // AWS AI/ML Services
   {
     id: 18,
     title: 'ML Model Training Platform',
-    category: 'AWS AI/ML Services',
+    category: 'AWS Services',
     tags: ['SageMaker', 'Lambda', 'S3', 'API Gateway'],
     description: 'Machine learning model training and deployment platform using Amazon SageMaker and serverless architecture.',
     image: '/placeholder.jpg',
@@ -210,32 +206,16 @@ const categories = [
     icon: <BrainCog />,
   },
   {
-    name: 'Web Design & Development',
-    icon: <Rocket />,
-  },
-  {
     name: 'AI Chatbots',
     icon: <MessageSquare />,
   },
   {
-    name: 'AWS Cloud Infrastructure',
+    name: 'Web Design & Development',
+    icon: <Rocket />,
+  },
+  {
+    name: 'AWS Services',
     icon: <Cloud />,
-  },
-  {
-    name: 'AWS Database Solutions',
-    icon: <Database />,
-  },
-  {
-    name: 'AWS Security & Compliance',
-    icon: <Shield />,
-  },
-  {
-    name: 'AWS DevOps & CI/CD',
-    icon: <Server />,
-  },
-  {
-    name: 'AWS AI/ML Services',
-    icon: <Cpu />,
   },
 ];
 

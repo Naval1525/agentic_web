@@ -69,10 +69,13 @@ const itemFadeIn = {
 
 // Service options for the dropdown
 const serviceOptions = [
+  'AI Automation',
+  'AI Agents-as-a-Service',
+  'AI Chatbots',
   'Web Design',
   'Web Development',
   'UI/UX Design',
-  'Web Security',
+  'App Development',
   'AWS Cloud Infrastructure',
   'AWS Database Solutions',
   'AWS Security & Compliance',
@@ -81,10 +84,7 @@ const serviceOptions = [
   'AWS AI/ML Services',
   'AWS Networking & CDN',
   'AWS Backup & Disaster Recovery',
-  'AI Automation',
-  'AI Agents-as-a-Service',
-  'AI Chatbots',
-  'App Development',
+  'Web Security',
   'Blockchain Development',
   'Other'
 ];

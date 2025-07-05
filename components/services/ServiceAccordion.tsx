@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ServiceItem } from "./ServiceItem";
 import { services } from "./services";
-import { Dialog, DialogTrigger, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -18,15 +17,17 @@ export const ServiceAccordion = () => {
   return (
     <>
       <motion.section 
-        className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 px-4 py-8 sm:gap-6 sm:px-6 md:grid-cols-2 lg:px-8"
+        className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 lg:px-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
       >
-        {services.map((service, i) => (
-          <ServiceItem key={i} {...service} />
-        ))}
+        <div className="space-y-6">
+          {services.map((service, i) => (
+            <ServiceItem key={i} {...service} />
+          ))}
+        </div>
       </motion.section>
 
       <motion.div 

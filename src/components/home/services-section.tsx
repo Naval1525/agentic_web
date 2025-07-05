@@ -35,19 +35,19 @@ const services = [
   },
   {
     icon: <MessageSquare className="h-5 w-5" />,
-    title: "AI Chatbots & Agents",
+    title: "AI Agents-as-a-Service",
     description: "24/7 support that actually talks with GPT-powered bots.",
     stat: "Used by 20+ brands",
     href: "/portfolio",
     features: ["GPT Integration", "24/7 Support", "Lead Qualification", "Booking Systems"]
   },
   {
-    icon: <Cloud className="h-5 w-5" />,
-    title: "AWS Cloud Infrastructure",
-    description: "Scalable cloud solutions built on AWS best practices and enterprise standards.",
-    stat: "15+ cloud infrastructures deployed",
+    icon: <MessageSquare className="h-5 w-5" />,
+    title: "AI Chatbots",
+    description: "GPT bots that convert visitors into leads — hands-free.",
+    stat: "12 bots deployed",
     href: "/portfolio",
-    features: ["EC2 & Lambda", "Auto-scaling", "CloudFormation", "Multi-region"]
+    features: ["Custom Logic", "Real-time Integration", "Lead Conversion", "24/7 Support"]
   },
   {
     icon: <Globe className="h-5 w-5" />,
@@ -56,6 +56,14 @@ const services = [
     stat: "50+ websites launched",
     href: "/portfolio",
     features: ["Next.js Development", "SEO Optimization", "Mobile Responsive", "Performance"]
+  },
+  {
+    icon: <Cloud className="h-5 w-5" />,
+    title: "AWS Cloud Infrastructure",
+    description: "Scalable cloud solutions built on AWS best practices and enterprise standards.",
+    stat: "15+ cloud infrastructures deployed",
+    href: "/portfolio",
+    features: ["EC2 & Lambda", "Auto-scaling", "CloudFormation", "Multi-region"]
   },
   {
     icon: <Database className="h-5 w-5" />,
