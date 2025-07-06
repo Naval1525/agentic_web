@@ -16,7 +16,7 @@ const HeroTitle = () => {
       >
         <span className="text-white">About</span>
         <br />
-        <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">WebNexaAI</span>
+        <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">AstraFlow</span>
       </motion.h1>
       <motion.p 
         className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto px-4"

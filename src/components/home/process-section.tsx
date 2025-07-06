@@ -46,10 +46,16 @@ const stats = [
 ]
 
 // Animated Counter Component
-const AnimatedCounter = ({ value, duration = 2000, delay = 0 }) => {
-  const [count, setCount] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
-  const countRef = useRef(null)
+interface AnimatedCounterProps {
+  value: number;
+  duration?: number;
+  delay?: number;
+}
+
+const AnimatedCounter = ({ value, duration = 2000, delay = 0 }: AnimatedCounterProps) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const countRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

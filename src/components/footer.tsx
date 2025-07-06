@@ -18,7 +18,7 @@ export default function Footer() {
             className="space-y-4"
           >
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="/logo.png" alt="WebNexaAI Logo" width={40} height={40} className="rounded-full" />
+              <Image src="/AstraFlow.png" alt="AstraFlow Logo" width={40} height={40} className="rounded-full" />
               <div className="font-bold text-xl">
                 <span className="text-primary">AstraFlow</span>
               </div>
