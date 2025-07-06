@@ -49,8 +49,8 @@ export default function Header() {
                 {/* Header with close button */}
                 <div className="flex items-center justify-between mb-8">
                   <Link href="/" className="flex items-center space-x-2 font-bold text-lg text-[#E0E0E0]">
-                    <Image src="/logo.png" alt="WebNexaAI Logo" width={28} height={28} className="rounded-full" />
-                    <span className="font-extrabold">WebNexaAI</span>
+                    <Image src="/AstraFlow.png" alt="AstraFlow Logo" width={28} height={28} className="rounded-full" />
+                    <span className="font-extrabold">AstraFlow</span>
                   </Link>
                   <Button 
                     variant="ghost" 
