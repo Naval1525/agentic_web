@@ -128,6 +128,54 @@ const projects: Project[] = [
     techStack: ["React", "Node.js", "PostgreSQL", "Redis", "AWS"],
     featured: true,
   },
+  {
+    id: 8,
+    title: "Chatbot Agent",
+    category: "Ai Agents",
+    tags: ["Chatbot","Voicebot", "AI", "Agent", "NLP"],
+    description:
+      "Intelligent cost efficient chatbot & voicebot agent that can handle customer queries, provide information, save previous chats and assist with various tasks using natural language processing. No hidden costs, no API keys required.",
+    image: "/images/portfolio/chat.jpeg",
+    liveUrl: "",
+    techStack: ["Agentic Ai", "Rag"],
+    featured: false,
+  },
+  {
+    id: 9,
+    title: "Linkedin Scraper",
+    category: "Ai Agents",
+    tags: ["Linkedin", "NLP"],
+    description:
+      "For HR, these solutions allow you to find candidate profiles efficiently across platforms, with no ongoing API fees, and are adaptable as your sourcing needs grow",
+    image: "/images/portfolio/Scraper.jpeg",
+    liveUrl: "",
+    techStack: ["Agentic Ai", "n8n"],
+    featured: false,
+  },
+  {
+    id: 10,
+    title: "Marketing agent",
+    category: "Ai Agents",
+    tags: ["Client", "Linkedn", "NLP", "Notion", "Voice call", "Research"],
+    description:
+      "A one-stop marketing agent can handle company research, update Notion, research client LinkedIn profiles, make voice calls, and send emails to clients—all in an integrated workflow.",
+    image: "/images/portfolio/client.jpeg",
+    liveUrl: "https://www.linkedin.com/posts/devanshi-jaiswal-b83774217_aiinsales-salesautomation-futureofoutreach-activity-7296915013691195392-7Xjq?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbAnJMB6L7n9WfYupSHXDDuz_zW4l8Lxa0",
+    techStack: ["Agentic Ai", "Make.com"],
+    featured: false,
+  },
+  {
+    id: 11,
+    title: "Email agent",
+    category: "Ai Agents",
+    tags: ["Gmail"],
+    description:
+      "Automate your entire Gmail workflow 100% locally: send and draft emails, analyze threads, manage mass campaigns via Google Sheets, and summarize long messages — all without exposing your Gmail API keys to third-party services. Everything runs on your own machine, keeping your data private and secure while eliminating repetitive manual tasks.",
+    image: "/images/portfolio/email.jpeg",
+    liveUrl: "https://www.linkedin.com/posts/devanshi-jaiswal-b83774217_langchain-automation-datasecurity-activity-7329486872466849792-uh8F?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbAnJMB6L7n9WfYupSHXDDuz_zW4l8Lxa0",
+    techStack: ["Agentic Ai", "langchain"],
+    featured: false,
+  },
 ];
 
 const categories: Category[] = [
@@ -145,6 +193,11 @@ const categories: Category[] = [
     name: "Fintech",
     icon: <DollarSign className="w-5 h-5" />,
     color: "from-green-500 to-emerald-500",
+  },
+  {
+    name: "Ai Agents",
+    icon: <Code className="w-5 h-5" />,
+    color: "from-yellow-500 to-orange-500",
   },
 ];
 
@@ -258,6 +311,7 @@ export default function PortfolioShowcase(): React.JSX.Element {
     "Web Development": false,
     "AI & Machine Learning": false,
     Fintech: false,
+    "Ai Agents": false,
   });
 
   const toggleSection = (categoryName: string): void => {

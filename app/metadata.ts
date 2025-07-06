@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "WebNexaAI | Leading Tech Solutions & Digital Innovation Partner",
-  description: "WebNexaAI is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
+  title: "AstraFlow | Where Cloud, Code & AI Converge",
+  description: "AstraFlow is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
   keywords: "web design, web development, UI/UX design, AWS cloud services, app development, blockchain development, tech solutions",
-  authors: [{ name: "WebNexaAI Team" }],
-  creator: "WebNexaAI",
-  publisher: "WebNexaAI",
+  authors: [{ name: "AstraFlow Team" }],
+  creator: "AstraFlow",
+  publisher: "AstraFlow",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://webnexaai.com",
-    title: "WebNexaAI | Leading Tech Solutions & Digital Innovation Partner",
-    description: "WebNexaAI is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
-    siteName: "WebNexaAI",
+    url: "https://AstraFlow.com",
+    title: "AstraFlow | Where Cloud, Code & AI Converge",
+    description: "AstraFlow is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
+    siteName: "AstraFlow",
   },
   twitter: {
     card: "summary_large_image",
-    title: "WebNexaAI | Leading Tech Solutions & Digital Innovation Partner",
-    description: "WebNexaAI is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
-    creator: "@webnexaai",
+    title: "AstraFlow | Where Cloud, Code & AI Converge",
+    description: "AstraFlow is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
+    creator: "@AstraFlow",
   },
   robots: {
     index: true,
