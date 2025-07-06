@@ -27,7 +27,7 @@ const teamMembers = [
     name: "Divyanshi Jaiswal",
     role: "Lead Developer & AI Architect",
     description:
-      "Passionate full-stack developer with 8+ years of experience crafting scalable web applications and intelligent AI solutions. Transforms complex business requirements into elegant, high-performance systems using cutting-edge technologies. Specializes in architecting robust Next.js applications, AWS cloud infrastructure, and seamless AI integrations that drive real business value.",
+      "Passionate full-stack developer with 4+ years of experience crafting scalable web applications and intelligent AI solutions. Transforms complex business requirements into elegant, high-performance systems using cutting-edge technologies. Specializes in architecting robust Next.js applications, AWS cloud infrastructure, and seamless AI integrations that drive real business value.",
     image: "/images/team/dj.png",
     specialties: ["Next.js", "AWS", "AI Integration", "Automation"],
     github: "https://github.com/Devanshi-cloud",
