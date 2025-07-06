@@ -1,31 +1,151 @@
 "use client";
 
-import { useEffect, useState, PropsWithChildren } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { ReactNode, FormEvent, ChangeEvent, JSX } from "react";
+
+// ---------- TYPES ----------
+
+interface FormProps {
+  children: ReactNode;
+  onSubmit?: (e: FormEvent<HTMLDivElement>) => void;
+  [key: string]: any;
+}
+
+interface FormItemProps {
+  children: ReactNode;
+}
+
+interface FormLabelProps {
+  children: ReactNode;
+}
+
+interface FormControlProps {
+  children: ReactNode;
+}
+
+interface FormMessageProps {
+  children?: ReactNode;
+}
+
+interface CardProps {
+  className?: string;
+  children: ReactNode;
+}
+
+interface CardHeaderProps {
+  children: ReactNode;
+}
+
+interface CardTitleProps {
+  className?: string;
+  children: ReactNode;
+}
+
+interface CardContentProps {
+  className?: string;
+  children: ReactNode;
+}
+
+interface ButtonProps {
+  className?: string;
+  children: ReactNode;
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset";
+  onClick?: (e: FormEvent<HTMLButtonElement>) => void;
+  [key: string]: any;
+}
+
+interface ContainerProps {
+  className?: string;
+  children: ReactNode;
+}
+
+interface InputProps {
+  className?: string;
+  name?: string;
+  value?: string;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
+  type?: string;
+  [key: string]: any;
+}
+
+interface TextareaProps {
+  className?: string;
+  name?: string;
+  value?: string;
+  onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+  placeholder?: string;
+  rows?: number;
+  [key: string]: any;
+}
+
+interface SelectProps {
+  className?: string;
+  children: ReactNode;
+  name?: string;
+  value?: string;
+  onChange?: (e: ChangeEvent<HTMLSelectElement>) => void;
+  [key: string]: any;
+}
+
+interface ContactInfoProps {
+  icon: string;
+  label: string;
+  value: string;
+}
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  service: string;
+  message: string;
+}
+
+interface FormErrors {
+  [key: string]: string;
+}
 
 // ---------- UI COMPONENTS ----------
 
-type WithClassName = { className?: string };
-
-const Form = ({ children, ...props }: PropsWithChildren<React.HTMLAttributes<HTMLDivElement>>) => (
+const Form = ({ children, ...props }: FormProps) => (
   <div {...props}>{children}</div>
 );
-const FormItem = ({ children }: PropsWithChildren) => <div className="space-y-2">{children}</div>;
-const FormLabel = ({ children }: PropsWithChildren) => <label className="block text-sm font-medium text-gray-200">{children}</label>;
-const FormControl = ({ children }: PropsWithChildren) => <div>{children}</div>;
-const FormMessage = ({ children }: PropsWithChildren) => children ? <p className="text-sm text-red-400">{children}</p> : null;
 
-const Card = ({ className = "", children }: PropsWithChildren<WithClassName>) => (
+const FormItem = ({ children }: FormItemProps) => (
+  <div className="space-y-2">{children}</div>
+);
+
+const FormLabel = ({ children }: FormLabelProps) => (
+  <label className="block text-sm font-medium text-gray-200">{children}</label>
+);
+
+const FormControl = ({ children }: FormControlProps) => (
+  <div>{children}</div>
+);
+
+const FormMessage = ({ children }: FormMessageProps) => 
+  children ? <p className="text-sm text-red-400">{children}</p> : null;
+
+const Card = ({ className = "", children }: CardProps) => (
   <div className={`p-6 rounded-lg ${className}`}>{children}</div>
 );
-const CardHeader = ({ children }: PropsWithChildren) => <div className="mb-4">{children}</div>;
-const CardTitle = ({ className = "", children }: PropsWithChildren<WithClassName>) => (
+
+const CardHeader = ({ children }: CardHeaderProps) => (
+  <div className="mb-4">{children}</div>
+);
+
+const CardTitle = ({ className = "", children }: CardTitleProps) => (
   <h2 className={className}>{children}</h2>
 );
-const CardContent = ({ className = "", children }: PropsWithChildren<WithClassName>) => (
+
+const CardContent = ({ className = "", children }: CardContentProps) => (
   <div className={className}>{children}</div>
 );
-const Button = ({ className = "", children, disabled, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+
+const Button = ({ className = "", children, disabled, ...props }: ButtonProps) => (
   <button
     className={`px-4 py-2 rounded-md font-medium transition-colors ${disabled ? "opacity-50 cursor-not-allowed" : "hover:opacity-90"} ${className}`}
     disabled={disabled}
@@ -34,26 +154,28 @@ const Button = ({ className = "", children, disabled, ...props }: React.ButtonHT
     {children}
   </button>
 );
-const Container = ({ className = "", children }: PropsWithChildren<WithClassName>) => (
-  <div className={`container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-4xl ${className}`}>{children}</div>
+
+const Container = ({ className = "", children }: ContainerProps) => (
+  <div className={`container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-4xl ${className}`}>
+    {children}
+  </div>
 );
-const Input = ({ className = "", ...props }: React.InputHTMLAttributes<HTMLInputElement>) => (
+
+const Input = ({ className = "", ...props }: InputProps) => (
   <input
     className={`w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${className}`}
     {...props}
   />
 );
-const Textarea = ({ className = "", ...props }: React.TextareaHTMLAttributes<HTMLTextAreaElement>) => (
+
+const Textarea = ({ className = "", ...props }: TextareaProps) => (
   <textarea
     className={`w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical ${className}`}
     {...props}
   />
 );
-const Select = ({
-  className = "",
-  children,
-  ...props
-}: React.SelectHTMLAttributes<HTMLSelectElement> & PropsWithChildren) => (
+
+const Select = ({ className = "", children, ...props }: SelectProps) => (
   <select
     className={`w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${className}`}
     {...props}
@@ -63,17 +185,18 @@ const Select = ({
 );
 
 // ---------- UTILS ----------
-const serviceOptions = [
+
+const serviceOptions: string[] = [
   "AI Automation", "AI Agents-as-a-Service", "AI Chatbots", "Web Design", "Web Development", "UI/UX Design",
   "App Development", "AWS Cloud Infrastructure", "AWS Database Solutions", "AWS Security & Compliance",
   "AWS DevOps & CI/CD", "AWS Serverless Solutions", "AWS AI/ML Services", "AWS Networking & CDN",
   "AWS Backup & Disaster Recovery", "Web Security", "Blockchain Development", "Other",
 ];
 
-const validateEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+const validateEmail = (email: string): boolean => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-const validateForm = (formData: typeof initialFormData) => {
-  const errors: Partial<Record<keyof typeof formData, string>> = {};
+const validateForm = (formData: FormData): FormErrors => {
+  const errors: FormErrors = {};
   if (!formData.name || formData.name.trim().length < 2)
     errors.name = "Name is required and must be at least 2 characters";
   if (!formData.email || !validateEmail(formData.email))
@@ -87,7 +210,7 @@ const validateForm = (formData: typeof initialFormData) => {
 
 // ---------- CONTACT FORM ----------
 
-const initialFormData = {
+const initialFormData: FormData = {
   name: "",
   email: "",
   phone: "",
@@ -95,63 +218,63 @@ const initialFormData = {
   message: "",
 };
 
-declare global {
-  interface Window {
-    emailjs: {
-      init: (publicKey: string) => void;
-      send: (
-        serviceID: string,
-        templateID: string,
-        templateParams: Record<string, any>
-      ) => Promise<{ status: number }>;
-    };
-  }
-}
-
-
 function ContactForm() {
-  const [formData, setFormData] = useState(initialFormData);
-  const [errors, setErrors] = useState<Partial<typeof initialFormData>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [success, setSuccess] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const [emailJSLoaded, setEmailJSLoaded] = useState(false);
+  const [emailJSLoaded, setEmailJSLoaded] = useState<boolean>(false);
 
   useEffect(() => {
+    // Load EmailJS script
     const script = document.createElement("script");
     script.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
     script.async = true;
     script.onload = () => {
-      if (window.emailjs) {
-        window.emailjs.init("7GpP_avUofQUsM1N-");
+      if ((window as any).emailjs) {
+        (window as any).emailjs.init("7GpP_avUofQUsM1N-"); // Your public key
         setEmailJSLoaded(true);
+        console.log("EmailJS loaded successfully");
       }
     };
+    script.onerror = () => {
+      console.error("Failed to load EmailJS");
+      setError("Failed to load email service. Please try again.");
+    };
     document.head.appendChild(script);
+    
     return () => {
-      document.head.contains(script) && document.head.removeChild(script);
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
     };
   }, []);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    if (errors[name as keyof typeof errors]) {
+    if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    e.stopPropagation();
+    
+    console.log("Form submitted!", formData);
 
-    if (!emailJSLoaded) {
-      setError("EmailJS is not loaded yet. Please try again.");
+    // Check if EmailJS is loaded
+    if (!emailJSLoaded || !(window as any).emailjs) {
+      setError("Email service is not ready. Please try again in a moment.");
       return;
     }
 
     const validationErrors = validateForm(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
+      console.log("Validation errors:", validationErrors);
       return;
     }
 
@@ -159,42 +282,63 @@ function ContactForm() {
     setError(null);
 
     try {
+      console.log("Sending email with EmailJS...");
+      
+      // Prepare email data
       const emailData = {
         name: formData.name,
         First: formData.name.split(" ")[0] || formData.name,
         Last: formData.name.split(" ").slice(1).join(" ") || "",
         email: formData.email,
-        phone: formData.phone || "",
+        phone: formData.phone || "Not provided",
         service: formData.service,
         Message: formData.message,
         title: `New Contact Form Submission - ${formData.service}`,
       };
 
-      const result = await window.emailjs.send("default_service", "template_2etb3qe", emailData);
+      console.log("Email data:", emailData);
+
+      // Send email using EmailJS
+      const result = await (window as any).emailjs.send(
+        "default_service", // Your service ID
+        "template_2etb3qe", // Your template ID
+        emailData
+      );
+
+      console.log("EmailJS result:", result);
 
       if (result.status === 200) {
+        console.log("Email sent successfully!");
         setSuccess(true);
         setFormData(initialFormData);
         setErrors({});
-        setTimeout(() => setSuccess(false), 4000);
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => setSuccess(false), 5000);
       } else {
-        throw new Error("Failed to send email");
+        throw new Error(`EmailJS returned status: ${result.status}`);
       }
-    } catch (err) {
+      
+    } catch (err: any) {
       console.error("EmailJS Error:", err);
-      setError("Failed to send message. Please try again or contact us directly.");
+      setError(`Failed to send message: ${err.message || 'Unknown error'}. Please try again or contact us directly.`);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <div className="space-y-6">
         <FormItem>
           <FormLabel>Name</FormLabel>
           <FormControl>
-            <Input name="name" value={formData.name} onChange={handleInputChange} placeholder="Your full name" />
+            <Input 
+              name="name" 
+              value={formData.name} 
+              onChange={handleInputChange} 
+              placeholder="Your full name" 
+            />
           </FormControl>
           <FormMessage>{errors.name}</FormMessage>
         </FormItem>
@@ -203,7 +347,13 @@ function ContactForm() {
           <FormItem>
             <FormLabel>Email</FormLabel>
             <FormControl>
-              <Input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="your.email@example.com" />
+              <Input 
+                type="email" 
+                name="email" 
+                value={formData.email} 
+                onChange={handleInputChange} 
+                placeholder="your.email@example.com" 
+              />
             </FormControl>
             <FormMessage>{errors.email}</FormMessage>
           </FormItem>
@@ -211,7 +361,13 @@ function ContactForm() {
           <FormItem>
             <FormLabel>Phone (Optional)</FormLabel>
             <FormControl>
-              <Input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="Your phone number" />
+              <Input 
+                type="tel" 
+                name="phone" 
+                value={formData.phone} 
+                onChange={handleInputChange} 
+                placeholder="Your phone number" 
+              />
             </FormControl>
           </FormItem>
         </div>
@@ -232,7 +388,13 @@ function ContactForm() {
         <FormItem>
           <FormLabel>Message</FormLabel>
           <FormControl>
-            <Textarea name="message" value={formData.message} onChange={handleInputChange} rows={5} placeholder="Tell us about your project" />
+            <Textarea 
+              name="message" 
+              value={formData.message} 
+              onChange={handleInputChange} 
+              rows={5} 
+              placeholder="Tell us about your project" 
+            />
           </FormControl>
           <FormMessage>{errors.message}</FormMessage>
         </FormItem>
@@ -245,18 +407,22 @@ function ContactForm() {
 
         <Button
           type="submit"
-          className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium rounded-lg px-6 py-3"
+          className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium rounded-lg px-6 py-3 hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
           disabled={isSubmitting || !emailJSLoaded}
         >
           {isSubmitting ? (
-            <>
-              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <div className="flex items-center justify-center">
+              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
-              Sending...
-            </>
-          ) : !emailJSLoaded ? "Loading..." : "Send Message"}
+              Sending Message...
+            </div>
+          ) : !emailJSLoaded ? (
+            "Loading Email Service..."
+          ) : (
+            "Send Message"
+          )}
         </Button>
 
         {success && (
@@ -274,7 +440,7 @@ function ContactForm() {
           </motion.div>
         )}
       </div>
-    </Form>
+    </form>
   );
 }
 
@@ -285,7 +451,7 @@ export default function ContactPage() {
     <main className="min-h-screen relative">
       <div className="absolute inset-0 -z-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/70 via-transparent to-black/50"></div>
-      <div className="absolute inset-0 -z-10 bg-gradient-radial from-blue-500/10 via-transparent to-slate-900/60"></div>
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-slate-900/60"></div>
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -298,7 +464,7 @@ export default function ContactPage() {
             Contact
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind? Let’s discuss how we can help you.
+            Have a project in mind? Let's discuss how we can help you.
           </p>
         </div>
       </motion.div>
@@ -330,18 +496,38 @@ export default function ContactPage() {
   );
 }
 
-function ContactInfo({ icon, label, value }: { icon: "phone" | "mail" | "location"; label: string; value: string }) {
-  const icons = {
+function ContactInfo({ icon, label, value }: ContactInfoProps) {
+  const icons: { [key: string]: ReactNode } = {
     phone: (
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493..." />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.69l1.38 4.14a1 1 0 01-.23.98l-2.2 2.2a11.05 11.05 0 005.17 5.17l2.2-2.2a1 1 0 01.98-.23l4.14 1.38a1 1 0 01.69.95V19a2 2 0 01-2 2h-1c-8.28 0-15-6.72-15-15V5z"
+      />
     ),
     mail: (
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8..." />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 0V6a2 2 0 00-2-2H5a2 2 0 00-2 2v2m18 0v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8"
+      />
     ),
     location: (
       <>
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9..." />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0..." />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12 22s8-4.5 8-10a8 8 0 10-16 0c0 5.5 8 10 8 10z"
+        />
       </>
     ),
   };
@@ -349,7 +535,12 @@ function ContactInfo({ icon, label, value }: { icon: "phone" | "mail" | "locatio
   return (
     <div className="flex items-start">
       <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1">
-        <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg
+          className="w-5 h-5 text-blue-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
           {icons[icon]}
         </svg>
       </div>

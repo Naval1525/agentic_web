@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
@@ -9,7 +9,57 @@ import { Dialog, DialogTrigger, DialogContent, DialogTitle } from "@/components/
 
 import { Button } from "@/components/ui/button"
 
+// Extend the Window interface to include VectorShift properties
+declare global {
+  interface Window {
+    vectorShiftChatWidget?: any;
+  }
+}
+
 export default function HeroSection() {
+  useEffect(() => {
+    // Function to load the VectorShift chat widget
+    const loadVectorShiftWidget = () => {
+      // Check if script is already loaded
+      if (document.getElementById('vectorshift-chat-widget')) {
+        return;
+      }
+
+      // Create and configure the script element
+      const script = document.createElement('script');
+      script.id = 'vectorshift-chat-widget';
+      script.src = 'https://app.vectorshift.ai/chatWidget.js';
+      script.async = true;
+      script.setAttribute('chatbot-id', '686ac9892b05bf83774dc2f8');
+      script.setAttribute('chatbot-height', '600px');
+      script.setAttribute('chatbot-width', '400px');
+
+      // Optional: Add error handling
+      script.onerror = () => {
+        console.error('Failed to load VectorShift chat widget');
+      };
+
+      // Optional: Add load success handler
+      script.onload = () => {
+        console.log('VectorShift chat widget loaded successfully');
+      };
+
+      // Append script to document head
+      document.head.appendChild(script);
+    };
+
+    // Load the widget when component mounts
+    loadVectorShiftWidget();
+
+    // Cleanup function to remove script when component unmounts
+    return () => {
+      const script = document.getElementById('vectorshift-chat-widget');
+      if (script) {
+        script.remove();
+      }
+    };
+  }, []);
+
   return (
     <section className="relative overflow-hidden py-10 md:py-28 lg:py-32 min-h-[80vh] md:min-h-screen flex items-center justify-center" style={{ minHeight: '80vh' }}>
       {/* Background image */}
