@@ -92,13 +92,13 @@ export default function Header() {
                   >
                     Portfolio
                   </Link>
-                  {/* <Link 
-                    href="/blog" 
+                  <Link 
+                    href="/projects" 
                     className="flex items-center px-4 py-3 text-[#E0E0E0] hover:text-white hover:bg-[#333] rounded-lg transition-all duration-200 font-medium"
                     onClick={() => setIsOpen(false)}
                   >
-                    Blog
-                  </Link> */}
+                    Projects
+                  </Link>
                   <Link 
                     href="/contact" 
                     className="flex items-center px-4 py-3 text-[#E0E0E0] hover:text-white hover:bg-[#333] rounded-lg transition-all duration-200 font-medium"
