@@ -18,7 +18,7 @@ const testimonials = [
   {
     id: 1,
     highlight: "2x leads in just 30 days.",
-    content: "We tripled our lead flow in less than a month thanks to WebNexa AI's automation setup. Their team nailed the website and built an AI bot that talks to our customers — and it actually works!",
+    content: "We tripled our lead flow in less than a month thanks to AstraFloww's automation setup. Their team nailed the website and built an AI bot that talks to our customers — and it actually works!",
     author: "Amit Roy",
     position: "Marketing Manager",
     company: "Lotus Wellness",
@@ -40,7 +40,7 @@ const testimonials = [
   {
     id: 3,
     highlight: "Saved 10+ hours/week on support.",
-    content: "WebNexaAI automated our FAQs and support. Our customers get instant answers, and our team can focus on growth. Highly recommend!",
+    content: "AstraFloww automated our FAQs and support. Our customers get instant answers, and our team can focus on growth. Highly recommend!",
     author: "Rahul Deshmukh",
     position: "Account Executive",
     company: "Urban Realty",
@@ -51,7 +51,7 @@ const testimonials = [
   {
     id: 4,
     highlight: "+65 happy clients and counting.",
-    content: "The team at WebNexaAI is exceptional. They understood our requirements perfectly and delivered a product that exceeded our expectations.",
+    content: "The team at AstraFloww is exceptional. They understood our requirements perfectly and delivered a product that exceeded our expectations.",
     author: "Aakash Verma",
     position: "Founder",
     company: "Verma Digital",

@@ -72,19 +72,6 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Vapi.ai Voice Assistant",
-    category: "AI & Machine Learning",
-    tags: ["AI", "Voice", "API", "Real-time"],
-    description:
-      "Advanced voice AI assistant platform with real-time conversation capabilities and seamless integration options.",
-    image: "/images/portfolio/vi.png",
-    liveUrl:
-      "https://vapi.ai/?demo=true&shareKey=63c7a6f5-1eaa-427e-b090-18675f7af789&assistantId=eec0247b-d45f-4d62-b8e6-0fece73b1ca9",
-    techStack: ["JavaScript", "WebRTC", "Voice API", "Node.js", "AI/ML"],
-    featured: true,
-  },
-  {
-    id: 4,
     title: "VitalsView - Fitness Tracker",
     category: "Web Development",
     tags: ["React", "Health", "Analytics"],
@@ -95,7 +82,7 @@ const projects: Project[] = [
     techStack: ["React", "Chart.js", "Firebase", "Tailwind CSS", "PWA"],
   },
   {
-    id: 5,
+    id: 4,
     title: "AI x Email",
     category: "AI & Machine Learning",
     tags: ["AI", "Email", "Automation", "NLP"],
@@ -106,7 +93,7 @@ const projects: Project[] = [
     techStack: ["React", "Node.js", "OpenAI API", "Gmail", "MongoDB"],
   },
   {
-    id: 6,
+    id: 5,
     title: "Virtual Venture",
     category: "Fintech",
     tags: ["Trading", "NSE", "BSE", "Finance"],
@@ -117,7 +104,7 @@ const projects: Project[] = [
     techStack: ["React", "Node.js", "Yahoo Finance", "Recharts", "Express"],
   },
   {
-    id: 7,
+    id: 6,
     title: "Hirees",
     category: "Web Development",
     tags: ["Recruitment", "HR", "Job Board"],
@@ -129,7 +116,7 @@ const projects: Project[] = [
     featured: true,
   },
   {
-    id: 8,
+    id: 7,
     title: "Chatbot Agent",
     category: "Ai Agents",
     tags: ["Chatbot","Voicebot", "AI", "Agent", "NLP"],
@@ -141,7 +128,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    id: 9,
+    id: 8,
     title: "Linkedin Scraper",
     category: "Ai Agents",
     tags: ["Linkedin", "NLP"],
@@ -153,7 +140,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    id: 10,
+    id: 9,
     title: "Marketing agent",
     category: "Ai Agents",
     tags: ["Client", "Linkedn", "NLP", "Notion", "Voice call", "Research"],
@@ -165,7 +152,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    id: 11,
+    id: 10,
     title: "Email agent",
     category: "Ai Agents",
     tags: ["Gmail"],
@@ -175,6 +162,23 @@ const projects: Project[] = [
     liveUrl: "https://www.linkedin.com/posts/devanshi-jaiswal-b83774217_langchain-automation-datasecurity-activity-7329486872466849792-uh8F?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbAnJMB6L7n9WfYupSHXDDuz_zW4l8Lxa0",
     techStack: ["Agentic Ai", "langchain"],
     featured: false,
+  },
+  {
+    id: 11,
+    title: "Navigate AI - Object Tracker",
+    category: "AI & Machine Learning",
+    tags: [
+      "YOLO",
+      "OpenCV",
+      "Python",
+      "Computer Vision",
+      "Hackathon Winner"
+    ],
+    description:
+      "Real-time YOLO + OpenCV-based vehicle detection and multi-object tracker with timestamping and counting.",
+    image: "/images/portfolio/navigateai.png",
+    liveUrl: "https://navigateai.streamlit.app/",
+    techStack: ["YOLO", "OpenCV", "Python", "Computer Vision"],
   },
 ];
 
