@@ -19,7 +19,7 @@ const CallToAction = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         whileHover={{ scale: 1.05 }}
       >
-        <h2 className="text-4xl font-bold text-white mb-4">🔥 WebNexa AI</h2>
+        <h2 className="text-4xl font-bold text-white mb-4">🔥 AstraFloww Solutions</h2>
         <p className="text-xl text-gray-300">
           Your Website. Your AI Agents. Your Business — on Autopilot.
         </p>

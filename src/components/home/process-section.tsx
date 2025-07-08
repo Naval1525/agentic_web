@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { MessageSquare, FileText, DollarSign, Users, Star, Briefcase } from "lucide-react"
+import { useState, useEffect, useRef } from "react"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 
@@ -29,20 +30,78 @@ const processSteps = [
 const stats = [
   {
     icon: <Users className="h-8 w-8" />,
-    value: "6+",
+    value: 6,
     label: "Year's Experience"
   },
   {
     icon: <Briefcase className="h-8 w-8" />,
-    value: "100+",
+    value: 50,
     label: "Projects"
   },
   {
     icon: <Star className="h-8 w-8" />,
-    value: "95+",
+    value: 30,
     label: "Reviews"
   }
 ]
+
+// Animated Counter Component
+interface AnimatedCounterProps {
+  value: number;
+  duration?: number;
+  delay?: number;
+}
+
+const AnimatedCounter = ({ value, duration = 2000, delay = 0 }: AnimatedCounterProps) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const countRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (countRef.current) {
+      observer.observe(countRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [isVisible])
+
+  useEffect(() => {
+    if (!isVisible) return
+
+    const timer = setTimeout(() => {
+      const increment = value / (duration / 50)
+      const interval = setInterval(() => {
+        setCount(prevCount => {
+          const newCount = prevCount + increment
+          if (newCount >= value) {
+            clearInterval(interval)
+            return value
+          }
+          return newCount
+        })
+      }, 50)
+
+      return () => clearInterval(interval)
+    }, delay)
+
+    return () => clearTimeout(timer)
+  }, [isVisible, value, duration, delay])
+
+  return (
+    <span ref={countRef} className="text-4xl md:text-5xl font-bold mb-2">
+      {Math.floor(count)}+
+    </span>
+  )
+}
 
 export default function ProcessSection() {
   return (
@@ -111,7 +170,13 @@ export default function ProcessSection() {
                 className="text-center"
               >
                 <div className="flex justify-center text-primary mb-4">{stat.icon}</div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">{stat.value}</div>
+                <div className="block">
+                  <AnimatedCounter 
+                    value={stat.value} 
+                    duration={2000} 
+                    delay={index * 200} 
+                  />
+                </div>
                 <div className="text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}

@@ -21,8 +21,8 @@ export default function Header() {
       <nav className="flex items-center justify-between w-full max-w-4xl px-6 py-2 bg-black/40 backdrop-blur-xl border border-white/20 shadow-2xl rounded-full" style={{ WebkitBackdropFilter: 'blur(24px)', backdropFilter: 'blur(24px)' }}>
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 font-bold text-lg text-[#E0E0E0]">
-          <Image src="/logo.png" alt="WebNexaAI Logo" width={32} height={32} className="rounded-full" />
-          <span className="font-extrabold">WebNexaAI</span>
+          <Image src="/AstraFlow.png" alt="astrafloww Logo" width={32} height={32} className="rounded-full" />
+          <span className="font-extrabold">AstraFloww</span>
         </Link>
         
         {/* Desktop Navigation */}
@@ -49,8 +49,8 @@ export default function Header() {
                 {/* Header with close button */}
                 <div className="flex items-center justify-between mb-8">
                   <Link href="/" className="flex items-center space-x-2 font-bold text-lg text-[#E0E0E0]">
-                    <Image src="/logo.png" alt="WebNexaAI Logo" width={28} height={28} className="rounded-full" />
-                    <span className="font-extrabold">WebNexaAI</span>
+                    <Image src="/AstraFlow.png" alt="AstraFloww Logo" width={28} height={28} className="rounded-full" />
+                    <span className="font-extrabold">AstraFloww</span>
                   </Link>
                   <Button 
                     variant="ghost" 
@@ -92,13 +92,13 @@ export default function Header() {
                   >
                     Portfolio
                   </Link>
-                  {/* <Link 
-                    href="/blog" 
+                  <Link 
+                    href="/projects" 
                     className="flex items-center px-4 py-3 text-[#E0E0E0] hover:text-white hover:bg-[#333] rounded-lg transition-all duration-200 font-medium"
                     onClick={() => setIsOpen(false)}
                   >
-                    Blog
-                  </Link> */}
+                    Projects
+                  </Link>
                   <Link 
                     href="/contact" 
                     className="flex items-center px-4 py-3 text-[#E0E0E0] hover:text-white hover:bg-[#333] rounded-lg transition-all duration-200 font-medium"
