@@ -71,6 +71,22 @@ const teamMembers = [
     github: "https://github.com/singhalansh",
     linkedin: "https://www.linkedin.com/in/anshsinghal2005/",
   },
+  {
+    id: 5,
+    name: "Komal Kumari",
+    role: "Social Media Head",
+    description:
+      "Social Media Head with a focus on building strong online communities, managing engaging content strategies, and driving brand presence across platforms. Skilled in content planning, audience growth, and using analytics to optimize campaigns for maximum reach and impact. Passionate about storytelling and leveraging social media trends to enhance brand identity and audience connection.",
+    image: "/images/team/komal.png",
+    specialties: [
+      "Content Strategy",
+      "Community Building",
+      "Analytics",
+      "Social Media Marketing",
+    ],
+    github: "https://github.com/Komxxd",
+    linkedin: "https://www.linkedin.com/in/komal-kumari-395309285/",
+  },
 ];
 
 const AboutPage = () => {
