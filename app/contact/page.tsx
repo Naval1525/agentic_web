@@ -485,7 +485,7 @@ export default function ContactPage() {
               <CardTitle className="text-2xl font-bold text-white mb-2">Contact Information</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <ContactInfo icon="phone" label="Phone" value="+91 9161055529" />
+              {/* <ContactInfo icon="phone" label="Phone" value="+91 9161055529" /> */}
               <ContactInfo icon="mail" label="Email" value="astrafloww@gmail.com" />
               <ContactInfo icon="location" label="Address" value="Greater Noida, India" />
             </CardContent>
