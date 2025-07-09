@@ -100,7 +100,7 @@ const projects = [
     description: 'A comprehensive financial dashboard design for a fintech startup, featuring intuitive data visualization and user-friendly interface.',
     image: '/placeholder.jpg',
     link: '/portfolio/financial-dashboard',
-    url: 'https://raisspices.com',
+    url: 'https://virtual-ventures.netlify.app/',
   },
   {
     id: 10,
@@ -110,7 +110,7 @@ const projects = [
     description: 'A mobile application for healthcare providers to manage patient records, appointments, and communication.',
     image: '/placeholder.jpg',
     link: '/portfolio/healthcare-app',
-    url: 'https://sanurrirugs.com',
+    
   },
   {
     id: 11,

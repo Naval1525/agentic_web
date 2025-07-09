@@ -157,7 +157,7 @@ export default function HeroSection() {
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="rounded-full border-white/40 text-white bg-white/10 hover:bg-white/20">
-              <Link href="#" target="_blank">
+              <Link href="https://www.youtube.com/shorts/WLK8vLaf6KY" target="_blank">
                 Watch Video
               </Link>
             </Button>

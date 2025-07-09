@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AstraFlow | Where Cloud, Code & AI Converge",
-  description: "AstraFlow is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
+  title: "AstraFloww | Where Cloud, Code & AI Converge",
+  description: "AstraFloww is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
   keywords: "web design, web development, UI/UX design, AWS cloud services, app development, blockchain development, tech solutions",
-  authors: [{ name: "AstraFlow Team" }],
-  creator: "AstraFlow",
-  publisher: "AstraFlow",
+  authors: [{ name: "AstraFloww Team" }],
+  creator: "AstraFloww",
+  publisher: "AstraFloww",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://AstraFlow.com",
-    title: "AstraFlow | Where Cloud, Code & AI Converge",
-    description: "AstraFlow is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
-    siteName: "AstraFlow",
+    url: "https://AstraFloww.com",
+    title: "AstraFloww | Where Cloud, Code & AI Converge",
+    description: "AstraFloww is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
+    siteName: "AstraFloww",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AstraFlow | Where Cloud, Code & AI Converge",
-    description: "AstraFlow is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
-    creator: "@AstraFlow",
+    title: "AstraFloww | Where Cloud, Code & AI Converge",
+    description: "AstraFloww is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
+    creator: "@AstraFloww",
   },
   robots: {
     index: true,

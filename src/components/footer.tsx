@@ -18,28 +18,28 @@ export default function Footer() {
             className="space-y-4"
           >
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="/AstraFlow.png" alt="AstraFlow Logo" width={40} height={40} className="rounded-full" />
+              <Image src="/AstraFloww.png" alt="AstraFloww Logo" width={40} height={40} className="rounded-full" />
               <div className="font-bold text-xl">
-                <span className="text-primary">AstraFlow</span>
+                <span className="text-primary">AstraFloww</span>
               </div>
             </Link>
             <p className="text-muted-foreground">
               An AI-powered agency helping businesses scale through websites, automation, and cloud services.
             </p>
             <div className="flex space-x-4">
-              <Link href="https://www.instagram.com/astrafloww/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://www.instagram.com/AstraFlowww/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="https://www.linkedin.com/company/astraflow/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://www.linkedin.com/company/AstraFloww/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="https://x.com/astraflow/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://x.com/AstraFloww/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="https://www.facebook.com/astraflow" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://www.facebook.com/AstraFloww" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
@@ -72,7 +72,7 @@ export default function Footer() {
             className="space-y-4"
           >
             <h3 className="font-semibold text-lg">Contact</h3>
-            <p className="text-muted-foreground">📧 astrafloww@gmail.com</p>
+            <p className="text-muted-foreground">📧 AstraFlowww@gmail.com</p>
           </motion.div>
 
           <motion.div
@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>© AstraFlow. All rights reserved.</p>
+          <p>© AstraFloww. All rights reserved.</p>
         </div>
       </div>
     </footer>
