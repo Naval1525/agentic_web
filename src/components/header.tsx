@@ -51,7 +51,7 @@ export default function Header() {
                   <Link href="/" className="flex items-center space-x-2 font-bold text-lg text-[#E0E0E0]">
                     <Image src="/AstraFloww.png" alt="AstraFloww Logo" width={28} height={28} className="rounded-full" />
                     <span className="font-extrabold">AstraFloww</span>
-                    <Image src="/AstraFlow.png" alt="AstraFloww Logo" width={28} height={28} className="rounded-full" />
+                    <Image src="/AstraFloww.png" alt="AstraFloww Logo" width={28} height={28} className="rounded-full" />
                     <span className="font-extrabold">AstraFloww</span>
                   </Link>
                   <Button 
