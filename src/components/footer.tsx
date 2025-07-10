@@ -72,7 +72,7 @@ export default function Footer() {
             className="space-y-4"
           >
             <h3 className="font-semibold text-lg">Contact</h3>
-            <p className="text-muted-foreground">📧 AstraFlowww@gmail.com</p>
+            <p className="text-muted-foreground">📧 AstraFloww@gmail.com</p>
           </motion.div>
 
           <motion.div
