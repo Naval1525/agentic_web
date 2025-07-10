@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ReactNode, FormEvent, ChangeEvent, JSX } from "react";
 
-// ---------- TYPES ----------
 
 interface FormProps {
   children: ReactNode;
