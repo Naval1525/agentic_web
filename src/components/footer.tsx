@@ -27,7 +27,7 @@ export default function Footer() {
               An AI-powered agency helping businesses scale through websites, automation, and cloud services.
             </p>
             <div className="flex space-x-4">
-              <Link href="https://www.instagram.com/AstraFlowww/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://www.instagram.com/AstraFloww/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
@@ -39,7 +39,7 @@ export default function Footer() {
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="https://www.facebook.com/astrafloww" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://www.facebook.com/profile.php?id=61578238614582" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
