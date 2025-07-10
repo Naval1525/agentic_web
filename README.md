@@ -1,6 +1,6 @@
-# WebNexaAI - Digital Agency Website
+# AstraFloww - Digital Agency Website
 
-A modern, responsive website for WebNexaAI, a premier technology solutions provider offering innovative digital services and custom software solutions.
+A modern, responsive website for AstraFloww, a premier technology solutions provider offering innovative digital services and custom software solutions.
 
 ## Features
 

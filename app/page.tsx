@@ -1,8 +1,5 @@
-"use client"
+"use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 
@@ -14,10 +11,13 @@ import PortfolioSection from "../src/components/home/portfolio-section";
 import TestimonialsSection from "../src/components/home/testimonials-section";
 
 // Dynamic import for performance optimization
-const ThreeBackground = dynamic(() => import("../src/components/three-background"), {
-  ssr: false,
-  loading: () => <div className="fixed inset-0 bg-black/90" />
-});
+const ThreeBackground = dynamic(
+  () => import("../src/components/three-background"),
+  {
+    ssr: false,
+    loading: () => <div className="fixed inset-0 bg-black/90" />,
+  }
+);
 
 // Animation variants
 const fadeIn = {
@@ -25,8 +25,8 @@ const fadeIn = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const fadeInLeft = {
@@ -34,8 +34,8 @@ const fadeInLeft = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const fadeInRight = {
@@ -43,8 +43,8 @@ const fadeInRight = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const staggerContainer = {
@@ -53,9 +53,9 @@ const staggerContainer = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.3
-    }
-  }
+      delayChildren: 0.3,
+    },
+  },
 };
 
 const itemFadeIn = {
@@ -63,8 +63,8 @@ const itemFadeIn = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5 }
-  }
+    transition: { duration: 0.5 },
+  },
 };
 
 export default function Home() {
@@ -85,7 +85,7 @@ export default function Home() {
             src="/bg1.png"
             alt="Background"
             className="w-full h-full object-cover object-center"
-            style={{ minHeight: '100%', minWidth: '100%' }}
+            style={{ minHeight: "100%", minWidth: "100%" }}
           />
         </div>
         <TestimonialsSection />

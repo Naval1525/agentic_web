@@ -42,16 +42,6 @@ const projects = [
   },
   {
     id: 4,
-    title: 'AI Receptionist',
-    category: 'AI Agents-as-a-Service',
-    tags: ['OpenAI', 'Twilio', 'Voice'],
-    description: 'A virtual AI receptionist that answers calls, schedules appointments, and provides information 24/7.',
-    image: '/placeholder.jpg',
-    link: '/portfolio/ai-receptionist',
-    url: '',
-  },
-  {
-    id: 5,
     title: 'AI Lead Qualifier',
     category: 'AI Agents-as-a-Service',
     tags: ['LangChain', 'OpenAI', 'Automation'],
@@ -61,7 +51,7 @@ const projects = [
     url: '',
   },
   {
-    id: 6,
+    id: 5,
     title: 'AI Booking Agent',
     category: 'AI Agents-as-a-Service',
     tags: ['OpenAI', 'Calendly', 'Integration'],
@@ -72,7 +62,7 @@ const projects = [
   },
   // AI Chatbots
   {
-    id: 7,
+    id: 6,
     title: 'Custom Support Chatbot',
     category: 'AI Chatbots',
     tags: ['GPT-4', 'Custom Data', 'Slack'],
@@ -83,7 +73,7 @@ const projects = [
   },
   // Web Design & Development
   {
-    id: 8,
+    id: 7,
     title: 'E-Commerce Platform',
     category: 'Web Design & Development',
     tags: ['React', 'Node.js', 'MongoDB'],
@@ -93,7 +83,7 @@ const projects = [
     url: 'https://themajesticpeacock.com',
   },
   {
-    id: 9,
+    id: 8,
     title: 'Financial Dashboard',
     category: 'Web Design & Development',
     tags: ['Figma', 'Adobe XD', 'Prototyping'],
@@ -103,7 +93,7 @@ const projects = [
     url: 'https://virtual-ventures.netlify.app/',
   },
   {
-    id: 10,
+    id: 9,
     title: 'Healthcare Mobile App',
     category: 'Web Design & Development',
     tags: ['React Native', 'Firebase', 'Health API'],
@@ -113,7 +103,7 @@ const projects = [
     
   },
   {
-    id: 11,
+    id: 10,
     title: 'Real Estate Website',
     category: 'Web Design & Development',
     tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
@@ -124,7 +114,7 @@ const projects = [
   },
   // AWS Services (Consolidated)
   {
-    id: 12,
+    id: 11,
     title: 'Multi-Region Cloud Architecture',
     category: 'AWS Services',
     tags: ['EC2', 'CloudFormation', 'Auto-scaling', 'Load Balancer'],
@@ -134,7 +124,7 @@ const projects = [
     url: '',
   },
   {
-    id: 13,
+    id: 12,
     title: 'Serverless E-commerce Platform',
     category: 'AWS Services',
     tags: ['Lambda', 'API Gateway', 'DynamoDB', 'CloudFront'],
@@ -144,7 +134,7 @@ const projects = [
     url: '',
   },
   {
-    id: 14,
+    id: 13,
     title: 'Database Migration & Optimization',
     category: 'AWS Services',
     tags: ['RDS', 'Aurora', 'DMS', 'Performance Tuning'],
@@ -154,7 +144,7 @@ const projects = [
     url: '',
   },
   {
-    id: 15,
+    id: 14,
     title: 'NoSQL Data Architecture',
     category: 'AWS Services',
     tags: ['DynamoDB', 'ElastiCache', 'Data Modeling', 'Caching'],
@@ -164,7 +154,7 @@ const projects = [
     url: '',
   },
   {
-    id: 16,
+    id: 15,
     title: 'Enterprise Security Framework',
     category: 'AWS Services',
     tags: ['IAM', 'VPC', 'CloudTrail', 'Compliance'],
@@ -174,7 +164,7 @@ const projects = [
     url: '',
   },
   {
-    id: 17,
+    id: 16,
     title: 'Automated CI/CD Pipeline',
     category: 'AWS Services',
     tags: ['CodePipeline', 'CodeBuild', 'ECS', 'Docker'],
@@ -184,7 +174,7 @@ const projects = [
     url: '',
   },
   {
-    id: 18,
+    id: 17,
     title: 'ML Model Training Platform',
     category: 'AWS Services',
     tags: ['SageMaker', 'Lambda', 'S3', 'API Gateway'],

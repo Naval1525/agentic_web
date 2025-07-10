@@ -7,7 +7,7 @@ import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t">
+    <footer className="bg-background border-t mt-10">
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <motion.div
@@ -18,7 +18,7 @@ export default function Footer() {
             className="space-y-4"
           >
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="/AstraFloww.png" alt="AstraFloww Logo" width={40} height={40} className="rounded-full" />
+              <Image src="/AstraFloww.png" alt="AstraFlow Logo" width={40} height={40} className="rounded-full" />
               <div className="font-bold text-xl">
                 <span className="text-primary">AstraFloww</span>
               </div>
@@ -31,15 +31,15 @@ export default function Footer() {
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="https://www.linkedin.com/company/AstraFloww/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://www.linkedin.com/company/astraflow/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="https://x.com/AstraFloww/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://x.com/astraflow/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="https://www.facebook.com/AstraFloww" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://www.facebook.com/astraflow" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
