@@ -5,15 +5,15 @@ export const metadata: Metadata = {
   description: "AstraFloww is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
   keywords: "web design, web development, UI/UX design, AWS cloud services, app development, blockchain development, tech solutions",
   authors: [{ name: "AstraFloww Team" }],
-  creator: "AstraFlow",
-  publisher: "AstraFlow",
+  creator: "AstraFloww",
+  publisher: "AstraFloww",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://AstraFloww.com",
     title: "AstraFloww | Where Cloud, Code & AI Converge",
     description: "AstraFloww is a premier technology solutions provider, offering innovative digital services and custom software solutions to transform your business.",
-    siteName: "AstraFlow",
+    siteName: "w",
   },
   twitter: {
     card: "summary_large_image",

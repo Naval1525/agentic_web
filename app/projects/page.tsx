@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import {
   Code,
   Globe,
@@ -456,7 +457,10 @@ export default function PortfolioShowcase(): React.JSX.Element {
               Get In Touch
             </button>
             <button className="px-8 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg font-semibold transition-colors">
-              View Resume
+              
+              <Link href={"https://linktr.ee/astrafloww"} target="_blank" rel="noopener noreferrer">
+              View LinkTree
+              </Link>
             </button>
           </div>
         </div>
