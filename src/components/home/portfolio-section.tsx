@@ -32,7 +32,7 @@ const portfolioItems = [
   },
   {
     id: 3,
-    title: "SanurriRugs",
+    title: "DevFlow",
     description: "Your go-to platform for coding questions, community-driven answers, and knowledge sharing. Join our community !",
     image: "/images/portfolio/df.png",
     url: "https://devflow-1.onrender.com/"

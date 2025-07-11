@@ -24,7 +24,7 @@ import {
 const teamMembers = [
   {
     id: 1,
-    name: "Divyanshi Jaiswal",
+    name: "Devanshi Jaiswal",
     role: "Lead Developer & AI Architect",
     description:
       "Passionate full-stack developer with 4+ years of experience crafting scalable web applications and intelligent AI solutions. Transforms complex business requirements into elegant, high-performance systems using cutting-edge technologies. Specializes in architecting robust Next.js applications, AWS cloud infrastructure, and seamless AI integrations that drive real business value.",
