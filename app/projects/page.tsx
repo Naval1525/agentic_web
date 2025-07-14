@@ -104,20 +104,8 @@ const projects: Project[] = [
     liveUrl: "https://virtual-ventures.netlify.app/",
     techStack: ["React", "Node.js", "Yahoo Finance", "Recharts", "Express"],
   },
-  {
+    {
     id: 6,
-    title: "Hirees",
-    category: "Web Development",
-    tags: ["Recruitment", "HR", "Job Board"],
-    description:
-      "Modern hiring platform connecting employers with talent through advanced matching algorithms and streamlined recruitment process.",
-    image: "/images/portfolio/hire.png",
-    liveUrl: "https://hirees.com/",
-    techStack: ["React", "Node.js", "PostgreSQL", "Redis", "AWS"],
-    featured: true,
-  },
-  {
-    id: 7,
     title: "Chatbot Agent",
     category: "Ai Agents",
     tags: ["Chatbot","Voicebot", "AI", "Agent", "NLP"],
@@ -129,7 +117,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    id: 8,
+    id: 7,
     title: "Linkedin Scraper",
     category: "Ai Agents",
     tags: ["Linkedin", "NLP"],
@@ -141,7 +129,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    id: 9,
+    id: 8,
     title: "Marketing agent",
     category: "Ai Agents",
     tags: ["Client", "Linkedn", "NLP", "Notion", "Voice call", "Research"],
@@ -153,7 +141,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    id: 10,
+    id: 9,
     title: "Email agent",
     category: "Ai Agents",
     tags: ["Gmail"],
@@ -165,7 +153,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    id: 11,
+    id: 10,
     title: "Navigate AI - Object Tracker",
     category: "AI & Machine Learning",
     tags: [
